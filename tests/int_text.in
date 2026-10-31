@@ -1,0 +1,14 @@
+let age = 30
+show "Age: " + age
+show "Total: " + 42
+show 100 + " points"
+let s = "Count: " + 7
+show s
+
+fn label(n: int) -> text {
+    return "No. " + n
+}
+show label(5)
+
+let year = 2026
+show "INDDN launched " + year + " in " + "Hyderabad"

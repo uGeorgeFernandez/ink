@@ -1,0 +1,13 @@
+let x = 10
+let y = 20
+let z = x + y
+show z
+
+if z > 25 {
+    show 1
+} else {
+    show 0
+}
+
+show 42
+show 100

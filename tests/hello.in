@@ -1,0 +1,24 @@
+// hello.in — First INK program
+// INK Language — Write the Future
+// IndianBrand Technology, Hyderabad, India
+
+show "Jai Hind!"
+show "India's Programming Language"
+
+let name = "George"
+let age = 30
+let city = "Hyderabad"
+
+show "Namaste " + name
+
+if age > 18 {
+    show "Adult"
+} else {
+    show "Young"
+}
+
+fn greet(name: text) {
+    show "Hello " + name
+}
+
+greet("India")

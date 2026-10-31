@@ -1,0 +1,7 @@
+let age = {"George": 30, "Priya": 25, "Arjun": 42}
+show age["George"]
+show age["Priya"]
+show age["Arjun"]
+
+let scores = {"math": 90, "science": 85}
+show scores["math"] + scores["science"]

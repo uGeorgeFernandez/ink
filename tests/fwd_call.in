@@ -1,0 +1,5 @@
+show greet("India")
+
+fn greet(name: text) -> text {
+    return "Hello " + name
+}

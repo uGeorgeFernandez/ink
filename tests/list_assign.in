@@ -1,0 +1,21 @@
+let nums = [1, 2, 3, 4, 5]
+nums[0] = 100
+nums[2] = 300
+show nums[0]
+show nums[1]
+show nums[2]
+
+// reverse a list in place
+let arr = [10, 20, 30, 40]
+let n = len(arr)
+let i = 0
+while i < 2 {
+    let tmp = arr[i]
+    arr[i] = arr[n - 1 - i]
+    arr[n - 1 - i] = tmp
+    i = i + 1
+}
+show arr[0]
+show arr[1]
+show arr[2]
+show arr[3]

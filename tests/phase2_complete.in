@@ -1,0 +1,37 @@
+// INK Phase 2 complete test
+show "Jai Hind!"
+
+let name = "IndianBrand"
+show name
+
+fn add(a: int, b: int) -> int {
+    return a + b
+}
+
+fn double(x: int) -> int {
+    return x + x
+}
+
+let sum = add(10, 32)
+show sum
+
+let d = double(sum)
+show d
+
+const MAX = 100
+show MAX
+
+let ok = true
+if ok {
+    show 1
+}
+
+for i in 0..3 {
+    show i
+}
+
+let j = 0
+while j < 2 {
+    show j
+    j = j + 1
+}

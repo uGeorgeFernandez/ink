@@ -1,0 +1,7 @@
+let msg = "Jai Hind! INK can write files."
+write_file("greeting.txt", msg)
+show "File written."
+
+let content = read_file("greeting.txt")
+show "File says:"
+show content

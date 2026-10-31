@@ -1,0 +1,4 @@
+let name = "George"
+let greeting = "Namaste " + name + "!"
+show greeting
+show "Jai " + "Hind " + "!"

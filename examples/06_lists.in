@@ -1,0 +1,4 @@
+let scores = [10, 20, 30, 40]
+show len(scores)
+show sum(scores)
+show scores[0]

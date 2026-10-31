@@ -1,0 +1,13 @@
+let nums = [5, 10, 15, 20, 25]
+show len(nums)
+
+let total = 0
+for i in 0..5 {
+    total = total + nums[i]
+}
+show total
+
+let names = [100, 200, 300]
+let first = names[0]
+let last = names[2]
+show first + last

@@ -1,0 +1,17 @@
+fn full_name(first: text, last: text) -> text {
+    return first + " " + last
+}
+
+fn welcome(name: text) -> text {
+    return "Welcome to INDDN, " + name + "!"
+}
+
+show welcome(full_name("George", "Kurian"))
+
+let msg = welcome("Hyderabad")
+show msg
+
+fn shout(word: text) -> text {
+    return word + word + word
+}
+show shout("Jai! ")

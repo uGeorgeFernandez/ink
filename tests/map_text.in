@@ -1,0 +1,11 @@
+let city = {"George": "Hyderabad", "Priya": "Delhi", "Arjun": "Mumbai"}
+show city["George"]
+show city["Priya"]
+show "Arjun lives in " + city["Arjun"]
+
+let capital = {"India": "New Delhi", "Japan": "Tokyo"}
+show capital["India"]
+
+// int maps must still work
+let age = {"a": 30, "b": 25}
+show age["a"] + age["b"]

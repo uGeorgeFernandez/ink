@@ -1,0 +1,5 @@
+show min(10, 3)
+show max(10, 3)
+show abs(0 - 42)
+show abs(42)
+show min(max(5, 2), 8)

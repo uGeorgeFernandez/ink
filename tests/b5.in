@@ -1,0 +1,11 @@
+let j = 0
+while j < 10 {
+    j = j + 1
+    if j == 3 {
+        continue
+    }
+    if j > 5 {
+        break
+    }
+    show j
+}

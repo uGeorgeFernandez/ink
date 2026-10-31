@@ -1,0 +1,4 @@
+let scores = [10, 20, 30]
+show scores[0]
+show scores[1]
+show scores[2]

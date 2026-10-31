@@ -1,0 +1,10 @@
+let marks = 75
+if marks > 90 {
+    show "Grade A"
+} else if marks > 60 {
+    show "Grade B"
+} else if marks > 40 {
+    show "Grade C"
+} else {
+    show "Fail"
+}

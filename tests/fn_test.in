@@ -1,0 +1,4 @@
+fn greet(name: text) {
+    show "Hello " + name
+}
+greet("India")

@@ -1,0 +1,6 @@
+let age = 25
+let result = 0
+if age > 18 {
+    result = 1
+}
+show result

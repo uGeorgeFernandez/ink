@@ -1,0 +1,13 @@
+let cities = ["Delhi", "Mumbai", "Hyderabad"]
+show cities[0]
+show cities[1]
+show cities[2]
+show len(cities)
+
+show "Welcome to " + cities[2]
+
+let i = 0
+while i < len(cities) {
+    show cities[i]
+    i = i + 1
+}

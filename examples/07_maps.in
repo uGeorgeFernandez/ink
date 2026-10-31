@@ -1,0 +1,3 @@
+let city = {"George": "Hyderabad", "Priya": "Delhi"}
+show city["George"]
+show "Priya lives in " + city["Priya"]

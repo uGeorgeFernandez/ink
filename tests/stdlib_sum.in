@@ -1,0 +1,8 @@
+let nums = [10, 20, 30, 40, 50]
+show sum(nums)
+show len(nums)
+
+let prices = [100, 250, 75]
+show sum(prices)
+show min(prices[0], prices[1])
+show max(prices[0], prices[2])

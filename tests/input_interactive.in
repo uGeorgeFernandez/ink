@@ -1,0 +1,11 @@
+show "What is your name?"
+let name = input_text()
+show "Namaste " + name
+
+show "Enter your age:"
+let age = input()
+if age > 17 {
+    show "You are an adult"
+} else {
+    show "You are young"
+}

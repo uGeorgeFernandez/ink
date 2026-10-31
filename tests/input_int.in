@@ -1,0 +1,6 @@
+show "Enter a number:"
+let n = input()
+show "You entered:"
+show n
+show "Doubled:"
+show n + n

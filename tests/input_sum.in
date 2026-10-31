@@ -1,0 +1,12 @@
+show "How many numbers?"
+let count = input()
+let total = 0
+let i = 0
+while i < count {
+    show "Enter number:"
+    let x = input()
+    total = total + x
+    i = i + 1
+}
+show "Sum is:"
+show total
