@@ -47,12 +47,30 @@
 
   <main>
     <div class="code-toolbar">
-      <div class="lang-toggles" id="langToggles"><span class="hint">Show:</span></div>
+      <div class="toolbar-row">
+        <div class="view-switch" role="group" aria-label="Layout">
+          <button type="button" data-view="cards">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            Cards
+          </button>
+          <button type="button" data-view="table">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 10h18M3 15h18M9 4v16"/></svg>
+            Table
+          </button>
+        </div>
+        <div class="lang-toggles" id="langToggles"><span class="hint">Show:</span></div>
+      </div>
       <div class="mobile-toc">
         <select id="codeJump" aria-label="Jump to a program"></select>
       </div>
     </div>
     <div id="allTasks"></div>
+    <div id="tableView" hidden>
+      <p class="table-hint">One row per program, one column per language. Scroll sideways to see every language; the program name stays fixed on the left.</p>
+      <div class="ct-wrap">
+        <table class="code-table" id="codeTable"></table>
+      </div>
+    </div>
 
     <div class="cta-band" style="margin-top:64px">
       <h2>Want the full picture?</h2>

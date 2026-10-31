@@ -100,20 +100,26 @@
 
   // Scroll a program into view just below the sticky language bar.
   function jumpTo(id, smooth) {
-    var target = document.getElementById(id);
+    var target = document.getElementById(state.view === "table" ? id.replace(/^t-/, "row-") : id);
     if (!target) return;
     var bar = document.querySelector(".code-toolbar");
     var offset = bar ? bar.getBoundingClientRect().height + 66 + 12 : 84;
     var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top: top, behavior: smooth ? "smooth" : "auto" });
+    window.scrollTo({ top: top, behavior: "instant" });
+    setTimeout(function () {
+      document.querySelectorAll("#codeToc a").forEach(function (a) {
+        a.classList.toggle("active", a.getAttribute("href") === "#" + id);
+      });
+    }, 50);
     if (history.replaceState) history.replaceState(null, "", "#" + id);
   }
 
   var snips = {};
-  var state = { task: "hello", on: { ink: true, py: true, php: true, cs: true, node: true } };
+  var state = { task: "hello", view: "cards", on: { ink: true, py: true, php: true, cs: true, node: true } };
   try {
     var saved = JSON.parse(localStorage.getItem("ink-compare-langs") || "null");
     if (saved) state.on = saved;
+    if (localStorage.getItem("ink-code-view") === "table") state.view = "table";
   } catch (e) {}
 
   var togglesEl = document.getElementById("langToggles");
@@ -168,10 +174,79 @@
     });
   }
 
+  // Table view on code.html: one row per program, one column per language.
+  function renderTable() {
+    var table = document.getElementById("codeTable");
+    var langs = LANGS.filter(function (l) { return state.on[l.id]; });
+    var html = '<thead><tr><th class="ct-prog">Program</th>';
+    langs.forEach(function (l) {
+      html += '<th class="' + l.cls + '"><span class="lang-dot"></span>' + l.name + "</th>";
+    });
+    html += "</tr></thead><tbody>";
+    var num = 0;
+    CATEGORIES.forEach(function (c) {
+      html += '<tr class="ct-cat"><th colspan="' + (langs.length + 1) + '"><span>' + esc(c.name) + "</span></th></tr>";
+      TASKS.filter(function (t) { return t.cat === c.id; }).forEach(function (t) {
+        num++;
+        html += '<tr id="row-' + t.id + '"><th class="ct-prog"><span class="task-num">' + (num < 10 ? "0" : "") + num + "</span>" +
+          "<b>" + esc(t.title) + "</b>" +
+          (t.out ? '<div class="ct-out">' + esc(t.out) + "</div>" : "") + "</th>";
+        langs.forEach(function (l) {
+          var s = snips[t.id + ":" + l.id];
+          if (!s) { html += "<td></td>"; return; }
+          var n = lineCount(s.code);
+          html += '<td class="' + l.cls + '"><pre><code>' + highlight(s.code, l.id) + "</code></pre>" +
+            '<div class="ct-meta">' + n + (n === 1 ? " line" : " lines") + "</div>" +
+            (s.note ? '<div class="ct-note">' + esc(s.note) + "</div>" : "") +
+            (s.res && s.res !== t.out ? '<div class="ct-res' + (s.bad ? " bad" : "") + '">' + esc(s.res) + "</div>" : "") +
+            "</td>";
+        });
+        html += "</tr>";
+      });
+    });
+    table.innerHTML = html + "</tbody>";
+    watchRows();
+  }
+
+  // Highlight the current program in the left list while scrolling the table.
+  var rowObserver = null;
+  function watchRows() {
+    if (!("IntersectionObserver" in window)) return;
+    if (rowObserver) rowObserver.disconnect();
+    rowObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting || state.view !== "table") return;
+        var href = "#t-" + e.target.id.replace(/^row-/, "");
+        document.querySelectorAll("#codeToc a").forEach(function (a) {
+          a.classList.toggle("active", a.getAttribute("href") === href);
+        });
+      });
+    }, { rootMargin: "-140px 0px -60% 0px" });
+    document.querySelectorAll("#codeTable tr[id]").forEach(function (r) { rowObserver.observe(r); });
+  }
+
+  function renderView() {
+    var tableEl = document.getElementById("tableView");
+    if (!tableEl) return;
+    allEl.hidden = state.view === "table";
+    var docs = document.querySelector(".docs");
+    if (docs) docs.classList.toggle("table-mode", state.view === "table");
+    tableEl.hidden = state.view !== "table";
+    document.querySelectorAll(".view-switch button").forEach(function (b) {
+      var on = b.dataset.view === state.view;
+      b.classList.toggle("on", on);
+      b.setAttribute("aria-pressed", on);
+    });
+  }
+
   function render() {
     renderToggles();
     if (tabsEl) renderTabs();
-    if (allEl) renderAll();
+    if (allEl) {
+      renderAll();
+      if (document.getElementById("codeTable")) renderTable();
+      renderView();
+    }
   }
 
   LANGS.forEach(function (l) {
@@ -250,6 +325,14 @@
       e.preventDefault();
       jumpTo(a.getAttribute("href").slice(1), true);
     });
+    document.querySelectorAll(".view-switch button").forEach(function (b) {
+      b.addEventListener("click", function () {
+        state.view = b.dataset.view;
+        try { localStorage.setItem("ink-code-view", state.view); } catch (e) {}
+        renderView();
+      });
+    });
+    renderView();
     var countEl = document.getElementById("taskCount");
     if (countEl) countEl.textContent = TASKS.length;
   }
