@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INK vs Python, PHP, .NET, Node.js — Compare</title>
+  <meta name="description" content="A simple, honest comparison of INK, Python, PHP, C#/.NET and Node.js for Indian students and developers: features, speed, jobs, ease of learning and side-by-side code.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f08a24'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='16' text-anchor='middle' fill='%23ffffff'%3EIN%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">IN</span>INK</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html#why">Why INK</a>
+      <a href="index.html#examples">Examples</a>
+      <a href="learn.html">Learn</a>
+      <a class="active" href="compare.html">Compare</a>
+      <a href="code.html">Code</a>
+      <a href="index.html#start">Get Started</a>
+      <a href="index.html#roadmap">Roadmap</a>
+      <a class="btn btn-primary btn-sm" href="https://github.com/uGeorgeFernandez/ink">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="eyebrow"><span class="dot"></span>For students &amp; developers across India</span>
+    <h1>INK vs Python, PHP, <span class="accent">.NET &amp; Node.js</span></h1>
+    <p>Which language should you learn? An honest, side-by-side comparison of features, speed, jobs and how easy each one is to learn, with the same programs written in all five.</p>
+  </div>
+</div>
+
+<!-- Meet the languages -->
+<section style="padding-top:64px">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Meet the five</span>
+      <h2>Five tools, five different jobs</h2>
+      <p>None of these is "the best". Each was built for a different purpose. Knowing that purpose is the first step to choosing well.</p>
+    </div>
+    <div class="lang-cards">
+      <div class="card lang-card c-ink">
+        <span class="tag">Language</span>
+        <h3>INK</h3>
+        <div class="since">2026 · IndianBrand Technology, Hyderabad</div>
+        <p>A small, safe, compiled language designed to read the way a person thinks. Made in India, its compiler is written in x86-64 Assembly.</p>
+      </div>
+      <div class="card lang-card c-py">
+        <span class="tag">Language</span>
+        <h3>Python</h3>
+        <div class="since">1991 · Guido van Rossum</div>
+        <p>The world's most popular beginner language, and the main language of AI, machine learning and data science.</p>
+      </div>
+      <div class="card lang-card c-php">
+        <span class="tag">Language</span>
+        <h3>PHP</h3>
+        <div class="since">1995 · Rasmus Lerdorf</div>
+        <p>Made for building websites. Powers WordPress and a large share of the web. Very common in Indian web agencies.</p>
+      </div>
+      <div class="card lang-card c-cs">
+        <span class="tag">Platform</span>
+        <h3>.NET (C#)</h3>
+        <div class="since">2002 · Microsoft</div>
+        <p>Microsoft's platform for business software, web APIs and games (Unity). Its main language is C#.</p>
+      </div>
+      <div class="card lang-card c-node">
+        <span class="tag">Runtime</span>
+        <h3>Node.js</h3>
+        <div class="since">2009 · Ryan Dahl</div>
+        <p>Runs JavaScript, the language of web browsers, on the server. One language for both the front end and the back end.</p>
+      </div>
+    </div>
+    <p style="color:var(--text-muted);font-size:.9rem;margin-top:18px"><b>Note:</b> .NET is a platform and Node.js is a runtime, not languages. On this page we compare them through their main languages: <b>C#</b> for .NET and <b>JavaScript</b> for Node.js.</p>
+  </div>
+</section>
+
+<!-- Big table -->
+<section class="soft" id="table">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">All the differences</span>
+      <h2>Feature-by-feature comparison</h2>
+      <p>Scroll sideways on a phone to see every column.</p>
+    </div>
+    <div class="cmp-table-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="ink-col c-ink"><span class="lang-dot"></span>INK</th>
+            <th class="c-py"><span class="lang-dot"></span>Python</th>
+            <th class="c-php"><span class="lang-dot"></span>PHP</th>
+            <th class="c-cs"><span class="lang-dot"></span>C# / .NET</th>
+            <th class="c-node"><span class="lang-dot"></span>Node.js</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>What it is</th>
+            <td class="ink-col">Programming language</td>
+            <td>Programming language</td>
+            <td>Programming language</td>
+            <td>Platform; main language C#</td>
+            <td>Runtime for JavaScript</td>
+          </tr>
+          <tr>
+            <th>How it runs</th>
+            <td class="ink-col">Compiled ahead of time to a native program (via LLVM)</td>
+            <td>Interpreted (CPython runs bytecode)</td>
+            <td>Interpreted, with caching and a JIT in PHP 8</td>
+            <td>Compiled to bytecode, then JIT-compiled by the .NET runtime</td>
+            <td>JIT-compiled by Google's V8 engine</td>
+          </tr>
+          <tr>
+            <th>Typing</th>
+            <td class="ink-col"><span class="lvl hi">Static</span><br>Types checked before running</td>
+            <td><span class="lvl mid">Dynamic</span><br>Optional type hints</td>
+            <td><span class="lvl mid">Dynamic</span><br>Optional type declarations</td>
+            <td><span class="lvl hi">Static</span><br>Strict, checked at compile time</td>
+            <td><span class="lvl mid">Dynamic</span><br>TypeScript adds static types</td>
+          </tr>
+          <tr>
+            <th>Speed</th>
+            <td class="ink-col"><span class="lvl hi">Native code</span><br>Young; not yet optimised or benchmarked</td>
+            <td><span class="lvl lo">Slower</span><br>Heavy work is done by C libraries (NumPy)</td>
+            <td><span class="lvl mid">Moderate</span><br>Fast enough for most websites</td>
+            <td><span class="lvl hi">Fast</span><br>Among the fastest web frameworks</td>
+            <td><span class="lvl hi">Fast</span><br>Especially for many connections at once</td>
+          </tr>
+          <tr>
+            <th>Memory safety</th>
+            <td class="ink-col"><span class="lvl hi">Safe</span><br>List bounds checked. Memory is not freed yet</td>
+            <td><span class="lvl hi">Safe</span><br>Garbage collected</td>
+            <td><span class="lvl hi">Safe</span><br>Garbage collected</td>
+            <td><span class="lvl hi">Safe</span><br>Managed memory, garbage collected</td>
+            <td><span class="lvl hi">Safe</span><br>Garbage collected</td>
+          </tr>
+          <tr>
+            <th>Syntax style</th>
+            <td class="ink-col">Plain words: <code>show</code>, <code>let</code>, <code>fn</code>. Braces, no semicolons</td>
+            <td>Indentation instead of braces. No semicolons</td>
+            <td><code>$</code> before every variable. Semicolons</td>
+            <td>Braces and semicolons; more words to type</td>
+            <td>Braces; semicolons optional</td>
+          </tr>
+          <tr>
+            <th>Main uses</th>
+            <td class="ink-col">Learning to program, small programs</td>
+            <td>AI/ML, data science, automation, web (Django, Flask)</td>
+            <td>Websites, WordPress, Laravel, CMS</td>
+            <td>Enterprise software, web APIs (ASP.NET Core), Windows apps, Unity games</td>
+            <td>Web servers, APIs, real-time apps (chat), full-stack JS</td>
+          </tr>
+          <tr>
+            <th>Libraries</th>
+            <td class="ink-col"><span class="lvl lo">Very few</span><br>Built-ins only; no package manager yet</td>
+            <td><span class="lvl hi">Huge</span><br>pip / PyPI</td>
+            <td><span class="lvl hi">Large</span><br>Composer / Packagist</td>
+            <td><span class="lvl hi">Large</span><br>NuGet</td>
+            <td><span class="lvl hi">Largest</span><br>npm</td>
+          </tr>
+          <tr>
+            <th>Runs on</th>
+            <td class="ink-col">Linux x86-64 (Windows via WSL)</td>
+            <td>Windows, macOS, Linux</td>
+            <td>Windows, macOS, Linux</td>
+            <td>Windows, macOS, Linux</td>
+            <td>Windows, macOS, Linux</td>
+          </tr>
+          <tr>
+            <th>Ease of learning</th>
+            <td class="ink-col"><span class="lvl hi">Very easy</span><br>Whole language fits on one page</td>
+            <td><span class="lvl hi">Very easy</span><br>Reads close to English</td>
+            <td><span class="lvl hi">Easy</span><br>Quick to see results in a browser</td>
+            <td><span class="lvl mid">Moderate</span><br>More concepts up front (types, classes)</td>
+            <td><span class="lvl mid">Moderate</span><br>Async code (callbacks, promises) confuses beginners</td>
+          </tr>
+          <tr>
+            <th>Jobs in India</th>
+            <td class="ink-col"><span class="lvl lo">None yet</span><br>Brand new language</td>
+            <td><span class="lvl hi">Very high</span><br>AI, data, backend, testing</td>
+            <td><span class="lvl hi">High</span><br>Web agencies, freelancing</td>
+            <td><span class="lvl hi">High</span><br>IT services, banks, enterprises</td>
+            <td><span class="lvl hi">High</span><br>Startups, product companies</td>
+          </tr>
+          <tr>
+            <th>Maturity</th>
+            <td class="ink-col"><span class="lvl mid">Prototype</span><br>Version 0.8</td>
+            <td><span class="lvl hi">Mature</span><br>30+ years</td>
+            <td><span class="lvl hi">Mature</span><br>30 years</td>
+            <td><span class="lvl hi">Mature</span><br>20+ years</td>
+            <td><span class="lvl hi">Mature</span><br>15+ years</td>
+          </tr>
+          <tr>
+            <th>Cost &amp; licence</th>
+            <td class="ink-col">Free, MIT licence</td>
+            <td>Free, open source</td>
+            <td>Free, open source</td>
+            <td>Free, open source (MIT)</td>
+            <td>Free, open source (MIT)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Ease -->
+<section id="ease">
+  <div class="container">
+    <div class="section-head center">
+      <span class="kicker">Ease of learning</span>
+      <h2>How easy is it for a first-time learner?</h2>
+      <p>How quickly a complete beginner can write useful programs on their own.</p>
+    </div>
+    <div class="ease">
+      <div class="ease-row c-ink"><div class="nm"><span class="lang-dot"></span>INK</div><div class="ease-bar"><span style="width:95%"></span></div><div class="lbl">Very easy · days</div></div>
+      <div class="ease-row c-py"><div class="nm"><span class="lang-dot"></span>Python</div><div class="ease-bar"><span style="width:90%"></span></div><div class="lbl">Very easy · weeks</div></div>
+      <div class="ease-row c-php"><div class="nm"><span class="lang-dot"></span>PHP</div><div class="ease-bar"><span style="width:75%"></span></div><div class="lbl">Easy · weeks</div></div>
+      <div class="ease-row c-node"><div class="nm"><span class="lang-dot"></span>Node.js</div><div class="ease-bar"><span style="width:62%"></span></div><div class="lbl">Moderate · months</div></div>
+      <div class="ease-row c-cs"><div class="nm"><span class="lang-dot"></span>C# / .NET</div><div class="ease-bar"><span style="width:55%"></span></div><div class="lbl">Moderate · months</div></div>
+    </div>
+    <p class="ease-note">This is our honest opinion, not a measurement. Everyone learns at their own pace.</p>
+  </div>
+</section>
+
+<!-- Side by side code -->
+<section class="soft" id="code">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Side-by-side code</span>
+      <h2>The same program in all five languages</h2>
+      <p>Pick a task, then compare. Turn languages on or off to compare just two or three. Every program does exactly the same thing.</p>
+    </div>
+    <div class="task-tabs" role="tablist" id="taskTabs"></div>
+    <div class="lang-toggles" id="langToggles"><span class="hint">Show:</span></div>
+    <div class="task-intro" id="taskIntro"></div>
+    <div class="code-grid" id="codeGrid"></div>
+    <p style="text-align:center;margin-top:32px"><a class="btn btn-primary" href="code.html">See all 22 programs side by side →</a></p>
+  </div>
+</section>
+
+<!-- Pros and cons -->
+<section id="pros">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Advantages &amp; disadvantages</span>
+      <h2>Strengths and weaknesses of each</h2>
+    </div>
+    <div class="pros-grid">
+      <div class="card pros-card c-ink">
+        <h3><span class="lang-dot"></span>INK</h3>
+        <h4 class="good">Advantages</h4>
+        <ul>
+          <li>Simplest words: <code>show</code>, <code>let</code>, <code>text</code></li>
+          <li>Type mistakes caught before the program runs</li>
+          <li>Compiles to a real native program</li>
+          <li>Small enough to learn in a weekend</li>
+          <li>Made in India, open source</li>
+        </ul>
+        <h4 class="bad">Disadvantages</h4>
+        <ul>
+          <li>Prototype: version 0.8</li>
+          <li>No libraries, packages or frameworks yet</li>
+          <li>Linux only for now</li>
+          <li>No jobs that ask for INK yet</li>
+        </ul>
+        <div class="best"><b>Best for:</b> your very first steps in programming.</div>
+      </div>
+      <div class="card pros-card c-py">
+        <h3><span class="lang-dot"></span>Python</h3>
+        <h4 class="good">Advantages</h4>
+        <ul>
+          <li>Very readable; great first language</li>
+          <li>Number one for AI, ML and data science</li>
+          <li>Huge library collection for almost anything</li>
+          <li>Massive community and free tutorials</li>
+        </ul>
+        <h4 class="bad">Disadvantages</h4>
+        <ul>
+          <li>Slower than compiled languages</li>
+          <li>Type errors often appear only while running</li>
+          <li>Not used for mobile apps or browser front ends</li>
+        </ul>
+        <div class="best"><b>Best for:</b> AI, data science, automation and scripting.</div>
+      </div>
+      <div class="card pros-card c-php">
+        <h3><span class="lang-dot"></span>PHP</h3>
+        <h4 class="good">Advantages</h4>
+        <ul>
+          <li>Built for the web; easy to host anywhere</li>
+          <li>Cheap shared hosting supports it</li>
+          <li>WordPress and Laravel are huge</li>
+          <li>Lots of freelance and agency work</li>
+        </ul>
+        <h4 class="bad">Disadvantages</h4>
+        <ul>
+          <li>Inconsistent function names in older parts</li>
+          <li><code>$</code> on every variable</li>
+          <li>Mostly limited to web development</li>
+        </ul>
+        <div class="best"><b>Best for:</b> websites, WordPress and freelancing.</div>
+      </div>
+      <div class="card pros-card c-cs">
+        <h3><span class="lang-dot"></span>C# / .NET</h3>
+        <h4 class="good">Advantages</h4>
+        <ul>
+          <li>Fast, strict and very reliable</li>
+          <li>Excellent tools (Visual Studio)</li>
+          <li>Used by banks and large IT companies</li>
+          <li>Also builds games with Unity</li>
+        </ul>
+        <h4 class="bad">Disadvantages</h4>
+        <ul>
+          <li>More to learn before your first program</li>
+          <li>More code for simple tasks</li>
+          <li>Large platform; can feel heavy</li>
+        </ul>
+        <div class="best"><b>Best for:</b> careers in enterprise software and IT services.</div>
+      </div>
+      <div class="card pros-card c-node">
+        <h3><span class="lang-dot"></span>Node.js</h3>
+        <h4 class="good">Advantages</h4>
+        <ul>
+          <li>One language (JavaScript) for front end and back end</li>
+          <li>Great for real-time apps and APIs</li>
+          <li>npm: the largest package registry</li>
+          <li>Popular with startups</li>
+        </ul>
+        <h4 class="bad">Disadvantages</h4>
+        <ul>
+          <li>Async code is hard for beginners</li>
+          <li>JavaScript has confusing corners (<code>==</code> vs <code>===</code>)</li>
+          <li>Too many choices of packages and frameworks</li>
+        </ul>
+        <div class="best"><b>Best for:</b> full-stack web development.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Which to learn -->
+<section class="soft" id="choose">
+  <div class="container">
+    <div class="section-head center">
+      <span class="kicker">Which should you learn?</span>
+      <h2>Pick by your goal, not by hype</h2>
+      <p>Once you know one language well, the second one is much easier to learn. The ideas carry over.</p>
+    </div>
+    <div class="paths">
+      <div class="card path c-ink"><div class="goal">Never coded before</div><div class="pick"><span class="lang-dot"></span>INK, then Python</div><p style="color:var(--text-muted)">Learn the core ideas (variables, loops, functions) with almost no syntax in the way, then move to Python.</p></div>
+      <div class="card path c-py"><div class="goal">AI, ML or data jobs</div><div class="pick"><span class="lang-dot"></span>Python</div><p style="color:var(--text-muted)">Almost every AI and data tool is built for Python first.</p></div>
+      <div class="card path c-php"><div class="goal">Websites &amp; freelancing</div><div class="pick"><span class="lang-dot"></span>PHP</div><p style="color:var(--text-muted)">The fastest way to build and sell websites to local businesses.</p></div>
+      <div class="card path c-cs"><div class="goal">Large IT companies</div><div class="pick"><span class="lang-dot"></span>C# / .NET</div><p style="color:var(--text-muted)">Widely used in enterprise projects, banking and corporate software.</p></div>
+      <div class="card path c-node"><div class="goal">Startups &amp; full-stack</div><div class="pick"><span class="lang-dot"></span>Node.js</div><p style="color:var(--text-muted)">Use JavaScript everywhere: the browser, the server and the tooling.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-band">
+      <h2>Start with the simplest one.</h2>
+      <p>Learn the ideas of programming in INK, then take them to any language you like.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="learn.html">Learn INK</a>
+        <a class="btn btn-ghost" href="index.html#start">Install INK</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark">IN</span>INK</a>
+        <p>A small, safe, compiled programming language by IndianBrand Technology, Hyderabad, India.</p>
+      </div>
+      <div>
+        <h4>Language</h4>
+        <a href="learn.html">Language guide</a>
+        <a href="learn.html#reference">Words reference</a>
+        <a href="compare.html">Compare languages</a>
+        <a href="code.html">Code comparison</a>
+        <a href="index.html#examples">Examples</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/uGeorgeFernandez/ink">GitHub</a>
+        <a href="https://github.com/uGeorgeFernandez/ink/issues">Report a bug</a>
+        <a href="https://github.com/uGeorgeFernandez/ink/blob/main/LICENSE">MIT License</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span><span class="tricolor"><i></i><i></i><i></i></span>© <span id="year">2026</span> IndianBrand Technology</span>
+      <span>Write the Future · Jai Hind!</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+<script src="assets/compare.js"></script>
+</body>
+</html>

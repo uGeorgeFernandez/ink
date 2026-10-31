@@ -1,0 +1,529 @@
+<!-- INK website: code samples shared by compare.html and code.html -->
+
+<!-- hello -->
+<script type="text/plain" class="snip" data-task="hello" data-lang="ink">show "Namaste, India!"</script>
+<script type="text/plain" class="snip" data-task="hello" data-lang="py">print("Namaste, India!")</script>
+<script type="text/plain" class="snip" data-task="hello" data-lang="php"><?php
+echo "Namaste, India!\n";</script>
+<script type="text/plain" class="snip" data-task="hello" data-lang="cs">Console.WriteLine("Namaste, India!");</script>
+<script type="text/plain" class="snip" data-task="hello" data-lang="node">console.log("Namaste, India!");</script>
+
+<!-- variables -->
+<script type="text/plain" class="snip" data-task="vars" data-lang="ink">let name = "Priya"
+let age = 21
+show "Name: " + name
+show "Age: " + age</script>
+<script type="text/plain" class="snip" data-task="vars" data-lang="py">name = "Priya"
+age = 21
+print("Name: " + name)
+print(f"Age: {age}")</script>
+<script type="text/plain" class="snip" data-task="vars" data-lang="php"><?php
+$name = "Priya";
+$age = 21;
+echo "Name: $name\n";
+echo "Age: $age\n";</script>
+<script type="text/plain" class="snip" data-task="vars" data-lang="cs">string name = "Priya";
+int age = 21;
+Console.WriteLine("Name: " + name);
+Console.WriteLine($"Age: {age}");</script>
+<script type="text/plain" class="snip" data-task="vars" data-lang="node">const name = "Priya";
+let age = 21;
+console.log("Name: " + name);
+console.log(`Age: ${age}`);</script>
+
+<!-- decisions -->
+<script type="text/plain" class="snip" data-task="if" data-lang="ink">let marks = 75
+if marks > 90 {
+    show "Grade A"
+} else if marks > 60 {
+    show "Grade B"
+} else {
+    show "Fail"
+}</script>
+<script type="text/plain" class="snip" data-task="if" data-lang="py">marks = 75
+if marks > 90:
+    print("Grade A")
+elif marks > 60:
+    print("Grade B")
+else:
+    print("Fail")</script>
+<script type="text/plain" class="snip" data-task="if" data-lang="php"><?php
+$marks = 75;
+if ($marks > 90) {
+    echo "Grade A\n";
+} elseif ($marks > 60) {
+    echo "Grade B\n";
+} else {
+    echo "Fail\n";
+}</script>
+<script type="text/plain" class="snip" data-task="if" data-lang="cs">int marks = 75;
+if (marks > 90) {
+    Console.WriteLine("Grade A");
+} else if (marks > 60) {
+    Console.WriteLine("Grade B");
+} else {
+    Console.WriteLine("Fail");
+}</script>
+<script type="text/plain" class="snip" data-task="if" data-lang="node">const marks = 75;
+if (marks > 90) {
+    console.log("Grade A");
+} else if (marks > 60) {
+    console.log("Grade B");
+} else {
+    console.log("Fail");
+}</script>
+
+<!-- loops -->
+<script type="text/plain" class="snip" data-task="loop" data-lang="ink">for i in 0..5 {
+    show i
+}</script>
+<script type="text/plain" class="snip" data-task="loop" data-lang="py">for i in range(5):
+    print(i)</script>
+<script type="text/plain" class="snip" data-task="loop" data-lang="php"><?php
+for ($i = 0; $i < 5; $i++) {
+    echo $i . "\n";
+}</script>
+<script type="text/plain" class="snip" data-task="loop" data-lang="cs">for (int i = 0; i < 5; i++) {
+    Console.WriteLine(i);
+}</script>
+<script type="text/plain" class="snip" data-task="loop" data-lang="node">for (let i = 0; i < 5; i++) {
+    console.log(i);
+}</script>
+
+<!-- functions -->
+<script type="text/plain" class="snip" data-task="fn" data-lang="ink">fn add(a: int, b: int) -> int {
+    return a + b
+}
+show add(5, 3)</script>
+<script type="text/plain" class="snip" data-task="fn" data-lang="py">def add(a: int, b: int) -> int:
+    return a + b
+
+print(add(5, 3))</script>
+<script type="text/plain" class="snip" data-task="fn" data-lang="php"><?php
+function add(int $a, int $b): int {
+    return $a + $b;
+}
+echo add(5, 3) . "\n";</script>
+<script type="text/plain" class="snip" data-task="fn" data-lang="cs">int Add(int a, int b) {
+    return a + b;
+}
+Console.WriteLine(Add(5, 3));</script>
+<script type="text/plain" class="snip" data-task="fn" data-lang="node">function add(a, b) {
+    return a + b;
+}
+console.log(add(5, 3));</script>
+
+<!-- lists -->
+<script type="text/plain" class="snip" data-task="list" data-lang="ink">let scores = [10, 20, 30, 40]
+show len(scores)
+show sum(scores)
+show scores[0]</script>
+<script type="text/plain" class="snip" data-task="list" data-lang="py">scores = [10, 20, 30, 40]
+print(len(scores))
+print(sum(scores))
+print(scores[0])</script>
+<script type="text/plain" class="snip" data-task="list" data-lang="php"><?php
+$scores = [10, 20, 30, 40];
+echo count($scores) . "\n";
+echo array_sum($scores) . "\n";
+echo $scores[0] . "\n";</script>
+<script type="text/plain" class="snip" data-task="list" data-lang="cs">int[] scores = { 10, 20, 30, 40 };
+Console.WriteLine(scores.Length);
+Console.WriteLine(scores.Sum());
+Console.WriteLine(scores[0]);</script>
+<script type="text/plain" class="snip" data-task="list" data-lang="node">const scores = [10, 20, 30, 40];
+console.log(scores.length);
+console.log(scores.reduce((a, b) => a + b, 0));
+console.log(scores[0]);</script>
+
+<!-- maps -->
+<script type="text/plain" class="snip" data-task="map" data-lang="ink">let city = {"George": "Hyderabad", "Priya": "Delhi"}
+show city["George"]
+show "Priya lives in " + city["Priya"]</script>
+<script type="text/plain" class="snip" data-task="map" data-lang="py">city = {"George": "Hyderabad", "Priya": "Delhi"}
+print(city["George"])
+print("Priya lives in " + city["Priya"])</script>
+<script type="text/plain" class="snip" data-task="map" data-lang="php"><?php
+$city = ["George" => "Hyderabad", "Priya" => "Delhi"];
+echo $city["George"] . "\n";
+echo "Priya lives in " . $city["Priya"] . "\n";</script>
+<script type="text/plain" class="snip" data-task="map" data-lang="cs">var city = new Dictionary<string, string> {
+    ["George"] = "Hyderabad",
+    ["Priya"] = "Delhi"
+};
+Console.WriteLine(city["George"]);
+Console.WriteLine("Priya lives in " + city["Priya"]);</script>
+<script type="text/plain" class="snip" data-task="map" data-lang="node">const city = { George: "Hyderabad", Priya: "Delhi" };
+console.log(city["George"]);
+console.log("Priya lives in " + city["Priya"]);</script>
+
+<!-- input -->
+<script type="text/plain" class="snip" data-task="input" data-lang="ink">show "What is your name?"
+let name = input_text()
+show "Namaste " + name</script>
+<script type="text/plain" class="snip" data-task="input" data-lang="py">name = input("What is your name? ")
+print("Namaste " + name)</script>
+<script type="text/plain" class="snip" data-task="input" data-lang="php"><?php
+$name = readline("What is your name? ");
+echo "Namaste " . $name . "\n";</script>
+<script type="text/plain" class="snip" data-task="input" data-lang="cs">Console.Write("What is your name? ");
+string? name = Console.ReadLine();
+Console.WriteLine("Namaste " + name);</script>
+<script type="text/plain" class="snip" data-task="input" data-lang="node">const readline = require("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+rl.question("What is your name? ", (name) => {
+    console.log("Namaste " + name);
+    rl.close();
+});</script>
+
+<!-- files -->
+<script type="text/plain" class="snip" data-task="file" data-lang="ink">let msg = "Jai Hind!"
+write_file("greeting.txt", msg)
+let content = read_file("greeting.txt")
+show content</script>
+<script type="text/plain" class="snip" data-task="file" data-lang="py">with open("greeting.txt", "w") as f:
+    f.write("Jai Hind!")
+
+with open("greeting.txt") as f:
+    print(f.read())</script>
+<script type="text/plain" class="snip" data-task="file" data-lang="php"><?php
+file_put_contents("greeting.txt", "Jai Hind!");
+echo file_get_contents("greeting.txt") . "\n";</script>
+<script type="text/plain" class="snip" data-task="file" data-lang="cs">File.WriteAllText("greeting.txt", "Jai Hind!");
+Console.WriteLine(File.ReadAllText("greeting.txt"));</script>
+<script type="text/plain" class="snip" data-task="file" data-lang="node">const fs = require("fs");
+fs.writeFileSync("greeting.txt", "Jai Hind!");
+console.log(fs.readFileSync("greeting.txt", "utf8"));</script>
+
+<!-- safety -->
+<script type="text/plain" class="snip" data-task="safe" data-lang="ink" data-res="Error: List index out of range (program stops)">let a = [10, 20, 30]
+show a[99]</script>
+<script type="text/plain" class="snip" data-task="safe" data-lang="py" data-res="IndexError: list index out of range (program stops)">a = [10, 20, 30]
+print(a[99])</script>
+<script type="text/plain" class="snip" data-task="safe" data-lang="php" data-res="Warning: Undefined array key 99 (prints nothing, keeps running)" data-bad="1"><?php
+$a = [10, 20, 30];
+echo $a[99];</script>
+<script type="text/plain" class="snip" data-task="safe" data-lang="cs" data-res="IndexOutOfRangeException (program stops)">int[] a = { 10, 20, 30 };
+Console.WriteLine(a[99]);</script>
+<script type="text/plain" class="snip" data-task="safe" data-lang="node" data-res="undefined (no error, keeps running)" data-bad="1">const a = [10, 20, 30];
+console.log(a[99]);</script>
+
+
+<!-- ================= More programs (code.html) ================= -->
+
+<!-- constants -->
+<script type="text/plain" class="snip" data-task="const" data-lang="ink">const MAX = 100
+show MAX</script>
+<script type="text/plain" class="snip" data-task="const" data-lang="py" data-note="Python has no real constants. CAPITAL letters only tell other people not to change it.">MAX = 100
+print(MAX)</script>
+<script type="text/plain" class="snip" data-task="const" data-lang="php"><?php
+const MAX = 100;
+echo MAX . "\n";</script>
+<script type="text/plain" class="snip" data-task="const" data-lang="cs">const int Max = 100;
+Console.WriteLine(Max);</script>
+<script type="text/plain" class="snip" data-task="const" data-lang="node">const MAX = 100;
+console.log(MAX);</script>
+
+<!-- maths -->
+<script type="text/plain" class="snip" data-task="maths" data-lang="ink" data-res="13&#10;7&#10;30&#10;3">let a = 10
+let b = 3
+show a + b
+show a - b
+show a * b
+show a / b</script>
+<script type="text/plain" class="snip" data-task="maths" data-lang="py" data-res="13&#10;7&#10;30&#10;3.3333333333333335" data-note="In Python, / always gives a decimal. Use // to get 3.">a = 10
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)</script>
+<script type="text/plain" class="snip" data-task="maths" data-lang="php" data-res="13&#10;7&#10;30&#10;3.3333333333333" data-note="PHP also gives a decimal. Use intdiv($a, $b) to get 3."><?php
+$a = 10;
+$b = 3;
+echo $a + $b, "\n";
+echo $a - $b, "\n";
+echo $a * $b, "\n";
+echo $a / $b, "\n";</script>
+<script type="text/plain" class="snip" data-task="maths" data-lang="cs" data-res="13&#10;7&#10;30&#10;3" data-note="Whole number divided by whole number gives a whole number, like INK.">int a = 10;
+int b = 3;
+Console.WriteLine(a + b);
+Console.WriteLine(a - b);
+Console.WriteLine(a * b);
+Console.WriteLine(a / b);</script>
+<script type="text/plain" class="snip" data-task="maths" data-lang="node" data-res="13&#10;7&#10;30&#10;3.3333333333333335" data-note="JavaScript has one number type, so / gives a decimal. Use Math.trunc(a / b) to get 3.">const a = 10;
+const b = 3;
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);</script>
+
+<!-- joining text and numbers -->
+<script type="text/plain" class="snip" data-task="join" data-lang="ink" data-note="+ joins text, and numbers become text automatically.">let age = 30
+show "Age: " + age</script>
+<script type="text/plain" class="snip" data-task="join" data-lang="py" data-note="Writing &quot;Age: &quot; + age without str() is an error in Python.">age = 30
+print("Age: " + str(age))</script>
+<script type="text/plain" class="snip" data-task="join" data-lang="php" data-note="PHP joins text with a dot (.), not +."><?php
+$age = 30;
+echo "Age: " . $age . "\n";</script>
+<script type="text/plain" class="snip" data-task="join" data-lang="cs">int age = 30;
+Console.WriteLine("Age: " + age);</script>
+<script type="text/plain" class="snip" data-task="join" data-lang="node">const age = 30;
+console.log("Age: " + age);</script>
+
+<!-- while -->
+<script type="text/plain" class="snip" data-task="while" data-lang="ink">let i = 0
+while i < 3 {
+    show i
+    i = i + 1
+}</script>
+<script type="text/plain" class="snip" data-task="while" data-lang="py">i = 0
+while i < 3:
+    print(i)
+    i += 1</script>
+<script type="text/plain" class="snip" data-task="while" data-lang="php"><?php
+$i = 0;
+while ($i < 3) {
+    echo $i . "\n";
+    $i++;
+}</script>
+<script type="text/plain" class="snip" data-task="while" data-lang="cs">int i = 0;
+while (i < 3) {
+    Console.WriteLine(i);
+    i++;
+}</script>
+<script type="text/plain" class="snip" data-task="while" data-lang="node">let i = 0;
+while (i < 3) {
+    console.log(i);
+    i++;
+}</script>
+
+<!-- break -->
+<script type="text/plain" class="snip" data-task="break" data-lang="ink">for i in 0..10 {
+    if i > 4 {
+        break
+    }
+    show i
+}</script>
+<script type="text/plain" class="snip" data-task="break" data-lang="py">for i in range(10):
+    if i > 4:
+        break
+    print(i)</script>
+<script type="text/plain" class="snip" data-task="break" data-lang="php"><?php
+for ($i = 0; $i < 10; $i++) {
+    if ($i > 4) {
+        break;
+    }
+    echo $i . "\n";
+}</script>
+<script type="text/plain" class="snip" data-task="break" data-lang="cs">for (int i = 0; i < 10; i++) {
+    if (i > 4) {
+        break;
+    }
+    Console.WriteLine(i);
+}</script>
+<script type="text/plain" class="snip" data-task="break" data-lang="node">for (let i = 0; i < 10; i++) {
+    if (i > 4) {
+        break;
+    }
+    console.log(i);
+}</script>
+
+<!-- function returning text -->
+<script type="text/plain" class="snip" data-task="greet" data-lang="ink">fn greet(name: text) -> text {
+    return "Namaste " + name
+}
+show greet("George")</script>
+<script type="text/plain" class="snip" data-task="greet" data-lang="py">def greet(name: str) -> str:
+    return "Namaste " + name
+
+print(greet("George"))</script>
+<script type="text/plain" class="snip" data-task="greet" data-lang="php"><?php
+function greet(string $name): string {
+    return "Namaste " . $name;
+}
+echo greet("George") . "\n";</script>
+<script type="text/plain" class="snip" data-task="greet" data-lang="cs">string Greet(string name) {
+    return "Namaste " + name;
+}
+Console.WriteLine(Greet("George"));</script>
+<script type="text/plain" class="snip" data-task="greet" data-lang="node">function greet(name) {
+    return "Namaste " + name;
+}
+console.log(greet("George"));</script>
+
+<!-- recursion -->
+<script type="text/plain" class="snip" data-task="fact" data-lang="ink">fn fact(n: int) -> int {
+    if n < 2 {
+        return 1
+    }
+    return n * fact(n - 1)
+}
+show fact(5)</script>
+<script type="text/plain" class="snip" data-task="fact" data-lang="py">def fact(n: int) -> int:
+    if n < 2:
+        return 1
+    return n * fact(n - 1)
+
+print(fact(5))</script>
+<script type="text/plain" class="snip" data-task="fact" data-lang="php"><?php
+function fact(int $n): int {
+    if ($n < 2) {
+        return 1;
+    }
+    return $n * fact($n - 1);
+}
+echo fact(5) . "\n";</script>
+<script type="text/plain" class="snip" data-task="fact" data-lang="cs">int Fact(int n) {
+    if (n < 2) {
+        return 1;
+    }
+    return n * Fact(n - 1);
+}
+Console.WriteLine(Fact(5));</script>
+<script type="text/plain" class="snip" data-task="fact" data-lang="node">function fact(n) {
+    if (n < 2) {
+        return 1;
+    }
+    return n * fact(n - 1);
+}
+console.log(fact(5));</script>
+
+<!-- change a list item -->
+<script type="text/plain" class="snip" data-task="listset" data-lang="ink">let nums = [1, 2, 3]
+nums[0] = 100
+show nums[0]</script>
+<script type="text/plain" class="snip" data-task="listset" data-lang="py">nums = [1, 2, 3]
+nums[0] = 100
+print(nums[0])</script>
+<script type="text/plain" class="snip" data-task="listset" data-lang="php"><?php
+$nums = [1, 2, 3];
+$nums[0] = 100;
+echo $nums[0] . "\n";</script>
+<script type="text/plain" class="snip" data-task="listset" data-lang="cs">int[] nums = { 1, 2, 3 };
+nums[0] = 100;
+Console.WriteLine(nums[0]);</script>
+<script type="text/plain" class="snip" data-task="listset" data-lang="node" data-note="const stops you replacing the whole list, but its items can still change.">const nums = [1, 2, 3];
+nums[0] = 100;
+console.log(nums[0]);</script>
+
+<!-- loop through a list -->
+<script type="text/plain" class="snip" data-task="each" data-lang="ink" data-note="INK has no for-each loop yet, so we walk the list by position.">let cities = ["Delhi", "Mumbai", "Hyderabad"]
+let i = 0
+while i < len(cities) {
+    show cities[i]
+    i = i + 1
+}</script>
+<script type="text/plain" class="snip" data-task="each" data-lang="py">cities = ["Delhi", "Mumbai", "Hyderabad"]
+for city in cities:
+    print(city)</script>
+<script type="text/plain" class="snip" data-task="each" data-lang="php"><?php
+$cities = ["Delhi", "Mumbai", "Hyderabad"];
+foreach ($cities as $city) {
+    echo $city . "\n";
+}</script>
+<script type="text/plain" class="snip" data-task="each" data-lang="cs">string[] cities = { "Delhi", "Mumbai", "Hyderabad" };
+foreach (string city in cities) {
+    Console.WriteLine(city);
+}</script>
+<script type="text/plain" class="snip" data-task="each" data-lang="node">const cities = ["Delhi", "Mumbai", "Hyderabad"];
+for (const city of cities) {
+    console.log(city);
+}</script>
+
+<!-- biggest -->
+<script type="text/plain" class="snip" data-task="biggest" data-lang="ink">fn biggest(xs: list) -> int {
+    let best = xs[0]
+    let i = 1
+    while i < len(xs) {
+        best = max(best, xs[i])
+        i = i + 1
+    }
+    return best
+}
+let data = [3, 9, 2, 15, 7]
+show biggest(data)</script>
+<script type="text/plain" class="snip" data-task="biggest" data-lang="py" data-note="Shortcut: Python can simply write max(data).">def biggest(xs: list) -> int:
+    best = xs[0]
+    for x in xs:
+        best = max(best, x)
+    return best
+
+data = [3, 9, 2, 15, 7]
+print(biggest(data))</script>
+<script type="text/plain" class="snip" data-task="biggest" data-lang="php" data-note="Shortcut: PHP can simply write max($data)."><?php
+function biggest(array $xs): int {
+    $best = $xs[0];
+    foreach ($xs as $x) {
+        $best = max($best, $x);
+    }
+    return $best;
+}
+$data = [3, 9, 2, 15, 7];
+echo biggest($data) . "\n";</script>
+<script type="text/plain" class="snip" data-task="biggest" data-lang="cs" data-note="Shortcut: C# can simply write data.Max().">int Biggest(int[] xs) {
+    int best = xs[0];
+    foreach (int x in xs) {
+        best = Math.Max(best, x);
+    }
+    return best;
+}
+int[] data = { 3, 9, 2, 15, 7 };
+Console.WriteLine(Biggest(data));</script>
+<script type="text/plain" class="snip" data-task="biggest" data-lang="node" data-note="Shortcut: JavaScript can simply write Math.max(...data).">function biggest(xs) {
+    let best = xs[0];
+    for (const x of xs) {
+        best = Math.max(best, x);
+    }
+    return best;
+}
+const data = [3, 9, 2, 15, 7];
+console.log(biggest(data));</script>
+
+<!-- read a number -->
+<script type="text/plain" class="snip" data-task="inputnum" data-lang="ink" data-note="input() reads a number directly.">show "Enter a number:"
+let n = input()
+show n + n</script>
+<script type="text/plain" class="snip" data-task="inputnum" data-lang="py" data-note="input() always gives text, so int() turns it into a number.">n = int(input("Enter a number: "))
+print(n + n)</script>
+<script type="text/plain" class="snip" data-task="inputnum" data-lang="php"><?php
+$n = (int) readline("Enter a number: ");
+echo ($n + $n) . "\n";</script>
+<script type="text/plain" class="snip" data-task="inputnum" data-lang="cs">Console.Write("Enter a number: ");
+int n = int.Parse(Console.ReadLine()!);
+Console.WriteLine(n + n);</script>
+<script type="text/plain" class="snip" data-task="inputnum" data-lang="node" data-note="Without Number(), &quot;21&quot; + &quot;21&quot; would give &quot;2121&quot;.">const readline = require("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+rl.question("Enter a number: ", (answer) => {
+    const n = Number(answer);
+    console.log(n + n);
+    rl.close();
+});</script>
+
+<!-- type mistake -->
+<script type="text/plain" class="snip" data-task="types" data-lang="ink" data-res="Error: wrong argument type&#10;(caught before the program runs)">fn add(a: int, b: int) -> int {
+    return a + b
+}
+show add("hello", 5)</script>
+<script type="text/plain" class="snip" data-task="types" data-lang="py" data-bad="1" data-res="TypeError: can only concatenate str (not &quot;int&quot;) to str&#10;(found only when this line runs)" data-note="Type hints are not checked when Python runs. Tools like mypy can check them.">def add(a: int, b: int) -> int:
+    return a + b
+
+print(add("hello", 5))</script>
+<script type="text/plain" class="snip" data-task="types" data-lang="php" data-bad="1" data-res="TypeError: add(): Argument #1 ($a) must be of type int, string given&#10;(found only when this line runs)"><?php
+function add(int $a, int $b): int {
+    return $a + $b;
+}
+echo add("hello", 5);</script>
+<script type="text/plain" class="snip" data-task="types" data-lang="cs" data-res="error CS1503: cannot convert from 'string' to 'int'&#10;(caught before the program runs)">int Add(int a, int b) {
+    return a + b;
+}
+Console.WriteLine(Add("hello", 5));</script>
+<script type="text/plain" class="snip" data-task="types" data-lang="node" data-bad="1" data-res="hello5&#10;(no error at all: the bug goes unnoticed)">function add(a, b) {
+    return a + b;
+}
+console.log(add("hello", 5));</script>

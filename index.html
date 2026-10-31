@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INK — Write the Future</title>
+  <meta name="description" content="INK is a small, safe, compiled programming language from IndianBrand Technology, Hyderabad. Code that reads the way you think, compiled to fast native binaries.">
+  <meta property="og:title" content="INK — Write the Future">
+  <meta property="og:description" content="A small, safe, compiled programming language. Its compiler is written entirely in x86-64 Assembly.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f08a24'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='16' text-anchor='middle' fill='%23ffffff'%3EIN%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">IN</span>INK</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav-links">
+      <a href="#why">Why INK</a>
+      <a href="#examples">Examples</a>
+      <a href="learn.html">Learn</a>
+      <a href="compare.html">Compare</a>
+      <a href="code.html">Code</a>
+      <a href="#start">Get Started</a>
+      <a href="#roadmap">Roadmap</a>
+      <a class="btn btn-primary btn-sm" href="https://github.com/uGeorgeFernandez/ink">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        GitHub
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span>Version 0.8 · Made in Hyderabad</span>
+      <h1>Code that reads<br>the way you <span class="accent">think.</span></h1>
+      <p class="lead">INK is a small, safe, compiled programming language. Simple enough for a first-time programmer, fast as native code, and memory-safe by default.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#start">
+          Get Started
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="learn.html">Read the Guide</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2 4 6v6c0 5 3.4 8.8 8 10 4.6-1.2 8-5 8-10V6l-8-4Z"/></svg>Memory-safe</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>Native speed</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg>Built in x86-64 Assembly</span>
+      </div>
+    </div>
+
+    <div class="window" aria-label="INK code example">
+      <div class="window-bar"><i></i><i></i><i></i><span class="window-title">namaste.in</span></div>
+      <pre><code class="ink">show "Jai Hind!"
+
+fn greet(name: text) -&gt; text {
+    return "Namaste " + name
+}
+
+show greet("George")
+show greet("Priya")
+
+let scores = [72, 95, 88]
+show "Best: " + max(scores[1], scores[2])</code></pre>
+      <div class="output">
+        <span class="output-label">Output</span>
+        <pre>Jai Hind!
+Namaste George
+Namaste Priya
+Best: 95</pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Why -->
+<section id="why">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Why INK</span>
+      <h2>The ease of Python. The speed of native code. None of C's danger.</h2>
+      <p>INK is built around one idea: a program should read like the instructions a person would naturally give.</p>
+    </div>
+    <div class="features">
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-1.5Z"/><path d="M8 7h6M8 11h6"/></svg></div>
+        <h3>Reads clearly</h3>
+        <p><code>show</code> instead of <code>print</code>, <code>let</code> instead of <code>var</code>, <code>text</code> instead of <code>str</code>. Words a beginner can guess.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.8 8 10 4.6-1.2 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Memory-safe</h3>
+        <p>Reading past the end of a list stops with a clear error instead of silently corrupting memory, the mistake behind most security bugs in C.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Type-checked</h3>
+        <p>Mistakes like subtracting a number from text are caught <em>before</em> your program runs, with a plain-English message.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div>
+        <h3>Compiled</h3>
+        <p>INK programs become real native executables through LLVM. No interpreter, no virtual machine, no waiting.</p>
+      </div>
+      <div class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8"/></svg></div>
+        <h3>Small</h3>
+        <p>The whole language fits on one page. A small language is one you can hold in your head.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Words -->
+<section class="soft" id="words">
+  <div class="container">
+    <div class="section-head center">
+      <span class="kicker">Honest words</span>
+      <h2>Where older languages chose an awkward word, INK chose a clear one.</h2>
+      <p>Everywhere else, INK keeps the familiar word: <code>if</code>, <code>for</code>, <code>while</code>, <code>return</code>. Changing a good word only to look different would be its own mistake.</p>
+    </div>
+    <div class="words">
+      <div class="word"><span class="old">print</span><span class="arrow">→</span><span class="new">show</span><span class="why">nothing is printed on paper today</span></div>
+      <div class="word"><span class="old">var</span><span class="arrow">→</span><span class="new">let</span><span class="why">reads like a sentence</span></div>
+      <div class="word"><span class="old">str</span><span class="arrow">→</span><span class="new">text</span><span class="why">the honest word for words</span></div>
+      <div class="word"><span class="old">def</span><span class="arrow">→</span><span class="new">fn</span><span class="why">short for function</span></div>
+      <div class="word"><span class="old">while(true)</span><span class="arrow">→</span><span class="new">loop</span><span class="why">one word for "repeat forever"</span></div>
+      <div class="word"><span class="old">array</span><span class="arrow">→</span><span class="new">list</span><span class="why">what people actually say</span></div>
+    </div>
+    <p class="quote">Would someone who has never programmed <span>guess what it means?</span> If yes, it belongs in INK.</p>
+  </div>
+</section>
+
+<!-- How it works -->
+<section id="how">
+  <div class="container">
+    <div class="section-head center">
+      <span class="kicker">Under the hood</span>
+      <h2>A compiler written from scratch</h2>
+      <p>Every stage of INK's compiler is hand-written in x86-64 Assembly. It owes its foundation to no other programming language.</p>
+    </div>
+    <div class="pipeline">
+      <div class="stage"><div class="num">INPUT</div><h3>Your program</h3><p><code>hello.in</code></p></div>
+      <div class="stage asm"><div class="num">STAGE 1</div><h3>Lexer</h3><p>Breaks code into tokens (words)</p></div>
+      <div class="stage asm"><div class="num">STAGE 2</div><h3>Parser</h3><p>Builds a syntax tree and checks types</p></div>
+      <div class="stage asm"><div class="num">STAGE 3</div><h3>Codegen</h3><p>Turns the tree into LLVM code</p></div>
+      <div class="stage"><div class="num">OUTPUT</div><h3>Native binary</h3><p>Compiled by <code>clang</code></p></div>
+    </div>
+    <p class="pipeline-note">Stages marked in saffron are <b>100% x86-64 Assembly</b>: over 9,500 lines of hand-written code.</p>
+  </div>
+</section>
+
+<!-- Examples -->
+<section class="soft" id="examples">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Examples</span>
+      <h2>See INK in action</h2>
+      <p>Eight small programs from the repository's <code>examples/</code> folder, each with its real output.</p>
+    </div>
+    <div class="examples">
+      <div class="ex-tabs" role="tablist">
+        <button class="ex-tab active" data-target="ex1" role="tab" aria-selected="true"><span class="n">01</span>Hello</button>
+        <button class="ex-tab" data-target="ex2" role="tab"><span class="n">02</span>Variables</button>
+        <button class="ex-tab" data-target="ex3" role="tab"><span class="n">03</span>Decisions</button>
+        <button class="ex-tab" data-target="ex4" role="tab"><span class="n">04</span>Loops</button>
+        <button class="ex-tab" data-target="ex5" role="tab"><span class="n">05</span>Functions</button>
+        <button class="ex-tab" data-target="ex6" role="tab"><span class="n">06</span>Lists</button>
+        <button class="ex-tab" data-target="ex7" role="tab"><span class="n">07</span>Maps</button>
+        <button class="ex-tab" data-target="ex8" role="tab"><span class="n">08</span>Find the biggest</button>
+      </div>
+      <div>
+        <div class="ex-panel active" id="ex1">
+          <div class="window">
+            <div class="window-bar"><i></i><i></i><i></i><span class="window-title">01_hello.in</span></div>
+            <pre><code class="ink">show "Hello from INK!"
+show "Jai Hind!"</code></pre>
+            <div class="output"><span class="output-label">Output</span><pre>Hello from INK!
+Jai Hind!</pre></div>
+          </div>
+          <p class="desc"><code>show</code> puts anything on the screen: text or numbers.</p>
+        </div>
+        <div class="ex-panel" id="ex2">
+          <div class="window">
+            <div class="window-bar"><i></i><i></i><i></i><span class="window-title">02_variables.in</span></div>
+            <pre><code class="ink">let name = "George"
+let age = 30
+show "Name: " + name
+show "Age: " + age</code></pre>
+            <div class="output"><span class="output-label">Output</span><pre>Name: George
+Age: 30</pre></div>
+          </div>
+          <p class="desc"><code>let</code> stores a value. Adding a number to text turns it into text automatically.</p>
+        </div>
+        <div class="ex-panel" id="ex3">
+          <div class="window">
+            <div class="window-bar"><i></i><i></i><i></i><span class="window-title">03_decisions.in</span></div>
+            <pre><code class="ink">let marks = 75
+if marks &gt; 90 {
+    show "Grade A"
+} else if marks &gt; 60 {
+    show "Grade B"
+} else {
+    show "Fail"
+}</code></pre>
+            <div class="output"><span class="output-label">Output</span><pre>Grade B</pre></div>
+          </div>
+          <p class="desc"><code>if</code>, <code>else if</code> and <code>else</code> read exactly like plain English.</p>
+        </div>
+        <div class="ex-panel" id="ex4">
+          <div class="window">
+            <div class="window-bar"><i></i><i></i><i></i><span class="window-title">04_loops.in</span></div>
+            <pre><code class="ink">for i in 0..5 {
+    show i
+}</code></pre>
+            <div class="output"><span class="output-label">Output</span><pre>0
+1
+2
+3
+4</pre></div>
+          </div>
+          <p class="desc">The range <code>0..5</code> counts up to, but not including, 5.</p>
+        </div>
+        <div class="ex-panel" id="ex5">
+          <div class="window">
+            <div class="window-bar"><i></i><i></i><i></i><span class="window-title">05_functions.in</span></div>
+            <pre><code class="ink">fn add(a: int, b: int) -&gt; int {
+    return a + b
+}
+show add(5, 3)</code></pre>
+            <div class="output"><span class="output-label">Output</span><pre>8</pre></div>
+          </div>
+          <p class="desc"><code>fn</code> defines a function. <code>-&gt;</code> reads as "gives back".</p>
+        </div>
+        <div class="ex-panel" id="ex6">
+          <div class="window">
+            <div class="window-bar"><i></i><i></i><i></i><span class="window-title">06_lists.in</span></div>
+            <pre><code class="ink">let scores = [10, 20, 30, 40]
+show len(scores)
+show sum(scores)
+show scores[0]</code></pre>
+            <div class="output"><span class="output-label">Output</span><pre>4
+100
+10</pre></div>
+          </div>
+          <p class="desc">Lists hold values in order. Positions start at 0, and <code>len</code> and <code>sum</code> are built in.</p>
+        </div>
+        <div class="ex-panel" id="ex7">
+          <div class="window">
+            <div class="window-bar"><i></i><i></i><i></i><span class="window-title">07_maps.in</span></div>
+            <pre><code class="ink">let city = {"George": "Hyderabad", "Priya": "Delhi"}
+show city["George"]
+show "Priya lives in " + city["Priya"]</code></pre>
+            <div class="output"><span class="output-label">Output</span><pre>Hyderabad
+Priya lives in Delhi</pre></div>
+          </div>
+          <p class="desc">Maps look up a value by name instead of by position.</p>
+        </div>
+        <div class="ex-panel" id="ex8">
+          <div class="window">
+            <div class="window-bar"><i></i><i></i><i></i><span class="window-title">08_biggest.in</span></div>
+            <pre><code class="ink">fn biggest(xs: list) -&gt; int {
+    let best = xs[0]
+    let i = 1
+    while i &lt; len(xs) {
+        best = max(best, xs[i])
+        i = i + 1
+    }
+    return best
+}
+let data = [3, 9, 2, 15, 7]
+show biggest(data)</code></pre>
+            <div class="output"><span class="output-label">Output</span><pre>15</pre></div>
+          </div>
+          <p class="desc">A real little program: functions, lists, a <code>while</code> loop and the built-in <code>max</code>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compare teaser -->
+<section id="compare">
+  <div class="container compare-teaser">
+    <div>
+      <span class="kicker">Compare</span>
+      <h2>INK vs Python, PHP, .NET and Node.js</h2>
+      <p style="color:var(--text-muted);font-size:1.08rem">Choosing your first language? Here is the short version. The full page compares features, speed, jobs, ease of learning and real code, side by side.</p>
+      <table class="mini-table">
+        <thead><tr><th>Language</th><th>Ease of learning</th><th>Best for</th></tr></thead>
+        <tbody>
+          <tr class="c-ink"><td><span class="lang-dot"></span> <b>INK</b></td><td><span class="lvl hi">Very easy</span></td><td>Learning to program</td></tr>
+          <tr class="c-py"><td><span class="lang-dot"></span> <b>Python</b></td><td><span class="lvl hi">Very easy</span></td><td>AI, data, automation</td></tr>
+          <tr class="c-php"><td><span class="lang-dot"></span> <b>PHP</b></td><td><span class="lvl hi">Easy</span></td><td>Websites, WordPress</td></tr>
+          <tr class="c-cs"><td><span class="lang-dot"></span> <b>C# / .NET</b></td><td><span class="lvl mid">Moderate</span></td><td>Enterprise apps</td></tr>
+          <tr class="c-node"><td><span class="lang-dot"></span> <b>Node.js</b></td><td><span class="lvl mid">Moderate</span></td><td>Web servers, APIs</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:24px"><a class="btn btn-primary" href="compare.html">See the full comparison
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+    </div>
+    <div>
+      <p style="font-weight:600;margin-bottom:12px">Same program, five languages: say "Namaste"</p>
+      <div class="teaser-list">
+        <div class="teaser-row c-ink"><b>INK</b><code class="ink">show "Namaste!"</code></div>
+        <div class="teaser-row c-py"><b>Python</b><code>print("Namaste!")</code></div>
+        <div class="teaser-row c-php"><b>PHP</b><code>&lt;?php echo "Namaste!";</code></div>
+        <div class="teaser-row c-cs"><b>C#</b><code>Console.WriteLine("Namaste!");</code></div>
+        <div class="teaser-row c-node"><b>Node.js</b><code>console.log("Namaste!");</code></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Get started -->
+<section id="start">
+  <div class="container">
+    <div class="section-head center">
+      <span class="kicker">Get started</span>
+      <h2>Run your first INK program in minutes</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Install the tools</h3>
+        <p>INK needs NASM and LLVM/Clang. On Ubuntu or Debian:</p>
+        <pre class="code">sudo apt-get install nasm llvm clang</pre>
+      </div>
+      <div class="step">
+        <h3>Get INK and build it</h3>
+        <p>Clone the repository and build the compiler:</p>
+        <pre class="code">git clone https://github.com/uGeorgeFernandez/ink
+cd ink
+./build.sh</pre>
+      </div>
+      <div class="step">
+        <h3>Write and run</h3>
+        <p>Save a file called <code>first.in</code>, then run it:</p>
+        <pre class="code"><code class="ink">show "Hello from INK!"</code></pre>
+        <pre class="code" style="margin-top:10px">./ink.sh first.in</pre>
+      </div>
+    </div>
+    <p class="req">Requires Linux on x86-64. On Windows, use <a href="https://learn.microsoft.com/windows/wsl/install">WSL</a>.</p>
+  </div>
+</section>
+
+<!-- Status & roadmap -->
+<section class="soft" id="roadmap">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Status &amp; roadmap</span>
+      <h2>An honest working prototype</h2>
+      <p>INK compiles and runs real programs today. Building operating systems, games or large applications is a long-term goal, and we say so plainly.</p>
+    </div>
+    <div class="status-grid">
+      <div class="card">
+        <div class="badge-row"><span class="pill ok">v0.8 working</span><span class="pill">60+ test programs</span></div>
+        <h3>Roadmap</h3>
+        <ul class="roadmap">
+          <li class="done"><span class="chk">✓</span>Lexer, parser, code generator</li>
+          <li class="done"><span class="chk">✓</span>Variables, functions, recursion</li>
+          <li class="done"><span class="chk">✓</span>Text, lists and maps</li>
+          <li class="done"><span class="chk">✓</span>Type checking and memory safety</li>
+          <li class="done"><span class="chk">✓</span>Keyboard input and file I/O</li>
+          <li class="todo"><span class="chk"></span>Comments, and line numbers in errors</li>
+          <li class="todo"><span class="chk"></span>Modules: <code>import</code> and multiple files</li>
+          <li class="todo"><span class="chk"></span>Bigger standard library (text tools)</li>
+          <li class="todo"><span class="chk"></span>A large test suite</li>
+          <li class="todo"><span class="chk"></span>Script Mode vs System Mode</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Known limitations</h3>
+        <ul class="limits">
+          <li>Memory is not freed yet, so very long-running programs use more and more memory.</li>
+          <li><code>read_file</code> reads up to 64 KB.</li>
+          <li>Error messages don't show line numbers yet.</li>
+          <li>No module or import system yet: one program, one file.</li>
+        </ul>
+        <h3 style="margin-top:28px">Help INK grow</h3>
+        <p class="muted" style="color:var(--text-muted)">The most valuable contribution is a real program written in INK. Bug reports and ideas are welcome on GitHub.</p>
+        <a class="btn btn-primary btn-sm" href="https://github.com/uGeorgeFernandez/ink/issues">Open an issue</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="container">
+    <div class="cta-band">
+      <h2>Write the Future.</h2>
+      <p>Learn the whole language in an afternoon, from your first <code>show</code> to maps and files.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="learn.html">Start learning</a>
+        <a class="btn btn-ghost" href="https://github.com/uGeorgeFernandez/ink">Star on GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark">IN</span>INK</a>
+        <p>A small, safe, compiled programming language by IndianBrand Technology, Hyderabad, India.</p>
+      </div>
+      <div>
+        <h4>Language</h4>
+        <a href="learn.html">Language guide</a>
+        <a href="learn.html#reference">Words reference</a>
+        <a href="compare.html">Compare languages</a>
+        <a href="code.html">Code comparison</a>
+        <a href="#examples">Examples</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/uGeorgeFernandez/ink">GitHub</a>
+        <a href="https://github.com/uGeorgeFernandez/ink/issues">Report a bug</a>
+        <a href="https://github.com/uGeorgeFernandez/ink/blob/main/LICENSE">MIT License</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span><span class="tricolor"><i></i><i></i><i></i></span>© <span id="year">2026</span> IndianBrand Technology</span>
+      <span>Write the Future · Jai Hind!</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
