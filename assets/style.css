@@ -564,3 +564,30 @@ html:has(.code-toolbar) { scroll-padding-top: 150px; }
 .code-table thead th.ct-prog { left: 0; z-index: 6; }
 .code-table tbody th.ct-prog { z-index: 3; }
 .code-table .ct-cat th span { z-index: 1; }
+
+/* Table view: use the full page width and tighter columns so 4-5 languages fit */
+.docs.table-mode {
+  max-width: min(1640px, calc(100vw - 40px));
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 28px;
+}
+.docs.table-mode .code-table td { min-width: 200px; }
+.docs.table-mode .code-table td pre { font-size: .76rem; padding: 12px 12px; }
+.docs.table-mode .code-table .ct-prog { width: 160px; min-width: 160px; max-width: 160px; }
+.docs.table-mode .code-table thead th { font-size: .92rem; padding: 12px; }
+.docs.table-mode .ct-meta, .docs.table-mode .ct-note, .docs.table-mode .ct-res { padding-left: 12px; padding-right: 12px; }
+/* Wide screens: drop the side list, fit every shown language across the full
+   width, and wrap long code lines so nothing needs horizontal scrolling. */
+@media (min-width: 1000px) {
+  .docs.table-mode .code-table { table-layout: fixed; width: 100%; min-width: 0; }
+  .docs.table-mode .code-table .ct-prog,
+  .docs.table-mode .code-table thead th.ct-prog { width: 150px; min-width: 150px; max-width: 150px; }
+  .docs.table-mode .code-table td { min-width: 0; }
+  .docs.table-mode .code-table td pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+}
+/* Below that, give the table the full width and scroll sideways instead. */
+@media (max-width: 999px) {
+  .docs.table-mode { grid-template-columns: minmax(0, 1fr); max-width: calc(100vw - 32px); }
+  .docs.table-mode .toc { display: none; }
+  .docs.table-mode .mobile-toc { display: block; }
+}
