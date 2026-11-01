@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code Comparison — INK, Python, PHP, C#, Node.js</title>
+  <meta name="description" content="22 small programs written in INK, Python, PHP, C# (.NET) and Node.js, side by side, with output and notes on every difference.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f08a24'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='16' text-anchor='middle' fill='%23ffffff'%3EIN%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">IN</span>INK</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html#why">Why INK</a>
+      <a href="index.html#examples">Examples</a>
+      <a href="learn.html">Learn</a>
+      <a href="compare.html">Compare</a>
+      <a class="active" href="code.html">Code</a>
+      <a href="index.html#start">Get Started</a>
+      <a class="btn btn-primary btn-sm" href="https://github.com/uGeorgeFernandez/ink">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="eyebrow"><span class="dot"></span>Code comparison · <span id="taskCount">22</span> programs × 5 languages</span>
+    <h1>Same program, <span class="accent">five languages</span></h1>
+    <p>Every program below is written in INK, Python, PHP, C# (.NET) and Node.js, side by side. Compare how each one looks, how many lines it takes, and what it prints. Turn languages on or off to compare just two.</p>
+  </div>
+</div>
+
+<div class="container docs">
+  <aside class="toc" id="codeToc">
+    <h4>Programs</h4>
+  </aside>
+
+  <main>
+    <div class="code-toolbar">
+      <div class="toolbar-row">
+        <div class="view-switch" role="group" aria-label="Layout">
+          <button type="button" data-view="cards">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            Cards
+          </button>
+          <button type="button" data-view="table">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 10h18M3 15h18M9 4v16"/></svg>
+            Table
+          </button>
+        </div>
+        <div class="lang-toggles" id="langToggles"><span class="hint">Show:</span></div>
+      </div>
+      <div class="mobile-toc">
+        <select id="codeJump" aria-label="Jump to a program"></select>
+      </div>
+    </div>
+    <div id="allTasks"></div>
+    <div id="tableView" hidden>
+      <p class="table-hint">One row per program, one column per language. Turn languages on or off above; the header row and program name stay fixed as you scroll.</p>
+      <div class="ct-wrap">
+        <table class="code-table" id="codeTable"></table>
+      </div>
+    </div>
+
+    <div class="cta-band" style="margin-top:64px">
+      <h2>Want the full picture?</h2>
+      <p>See speed, jobs in India, ease of learning, and the strengths and weaknesses of each language.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="compare.html">Full comparison</a>
+        <a class="btn btn-ghost" href="learn.html">Learn INK</a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark">IN</span>INK</a>
+        <p>A small, safe, compiled programming language by IndianBrand Technology, Hyderabad, India.</p>
+      </div>
+      <div>
+        <h4>Language</h4>
+        <a href="learn.html">Language guide</a>
+        <a href="learn.html#reference">Words reference</a>
+        <a href="compare.html">Compare languages</a>
+        <a href="code.html">Code comparison</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/uGeorgeFernandez/ink">GitHub</a>
+        <a href="https://github.com/uGeorgeFernandez/ink/issues">Report a bug</a>
+        <a href="https://github.com/uGeorgeFernandez/ink/blob/main/LICENSE">MIT License</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span><span class="tricolor"><i></i><i></i><i></i></span>© <span id="year">2026</span> IndianBrand Technology</span>
+      <span>Write the Future · Jai Hind!</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/compare.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
