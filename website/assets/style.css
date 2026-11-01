@@ -611,3 +611,16 @@ html:has(.code-toolbar) { scroll-padding-top: 150px; }
 /* Keep the description column fixed while scrolling the words table sideways */
 .words-table tbody th { position: sticky; left: 0; z-index: 2; box-shadow: 1px 0 0 var(--border); }
 .words-table thead th:first-child { position: sticky; left: 0; z-index: 3; background: var(--bg-soft); }
+
+/* Words page: pin the table under the nav and freeze its header row */
+.words-wrap {
+  position: sticky;
+  top: 66px;
+  max-height: calc(100vh - 82px);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.words-table thead th { position: sticky; top: 0; z-index: 4; }
+.words-table thead th:first-child { left: 0; z-index: 6; }
+.words-table tbody th { z-index: 3; }
+.words-table tr.wcat th { z-index: 2; }
