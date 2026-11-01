@@ -551,3 +551,16 @@ html:has(.code-toolbar) { scroll-padding-top: 150px; }
   .code-table .ct-prog { width: 120px; min-width: 120px; max-width: 120px; padding: 10px; }
   .code-table td { min-width: 250px; }
 }
+
+/* Frozen table header + first column (Code page, table view) */
+#tableView .ct-wrap {
+  position: sticky;
+  top: var(--ct-top, 150px);
+  max-height: calc(100vh - var(--ct-top, 150px) - 24px);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+.code-table thead th { position: sticky; top: 0; z-index: 4; }
+.code-table thead th.ct-prog { left: 0; z-index: 6; }
+.code-table tbody th.ct-prog { z-index: 3; }
+.code-table .ct-cat th span { z-index: 1; }

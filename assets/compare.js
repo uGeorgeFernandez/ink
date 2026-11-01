@@ -98,20 +98,46 @@
 
   function taskById(id) { return TASKS.filter(function (t) { return t.id === id; })[0]; }
 
-  // Scroll a program into view just below the sticky language bar.
-  function jumpTo(id, smooth) {
-    var target = document.getElementById(state.view === "table" ? id.replace(/^t-/, "row-") : id);
-    if (!target) return;
+  // Keeps the sticky offset (nav + toolbar height) current for the table box.
+  function updateCtTop() {
+    var nav = document.querySelector(".nav");
     var bar = document.querySelector(".code-toolbar");
-    var offset = bar ? bar.getBoundingClientRect().height + 66 + 12 : 84;
-    var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top: top, behavior: "instant" });
+    var h = (nav ? nav.offsetHeight : 66) + (bar ? bar.offsetHeight : 0) + 8;
+    document.documentElement.style.setProperty("--ct-top", h + "px");
+  }
+
+  // Scroll a program into view. In card view the page scrolls; in table view
+  // the frozen-header box scrolls internally, just below its header row.
+  function jumpTo(id, smooth) {
+    var plainId = id.replace(/^(t-|row-)/, "");
+    if (state.view === "table") {
+      var row = document.getElementById("row-" + plainId);
+      var wrap = document.querySelector("#tableView .ct-wrap");
+      if (row && wrap) {
+        var ctTop = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--ct-top"), 10) || 150;
+        var thead = wrap.querySelector("thead");
+        var theadH = thead ? thead.getBoundingClientRect().height : 0;
+        // Inner scroll is relative to the box, so it is unaffected by page scroll.
+        var delta = row.getBoundingClientRect().top - wrap.getBoundingClientRect().top;
+        wrap.scrollTop += delta - theadH - 6;
+        // Then slide the page so the box sits just under the sticky toolbar.
+        var y = wrap.getBoundingClientRect().top + window.pageYOffset - ctTop;
+        window.scrollTo({ top: Math.max(0, y), behavior: "instant" });
+      }
+    } else {
+      var target = document.getElementById("t-" + plainId);
+      if (target) {
+        var bar = document.querySelector(".code-toolbar");
+        var offset = bar ? bar.getBoundingClientRect().height + 66 + 12 : 84;
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - offset, behavior: "instant" });
+      }
+    }
     setTimeout(function () {
       document.querySelectorAll("#codeToc a").forEach(function (a) {
-        a.classList.toggle("active", a.getAttribute("href") === "#" + id);
+        a.classList.toggle("active", a.getAttribute("href") === "#t-" + plainId);
       });
     }, 50);
-    if (history.replaceState) history.replaceState(null, "", "#" + id);
+    if (history.replaceState) history.replaceState(null, "", "#t-" + plainId);
   }
 
   var snips = {};
@@ -213,6 +239,7 @@
   function watchRows() {
     if (!("IntersectionObserver" in window)) return;
     if (rowObserver) rowObserver.disconnect();
+    var wrap = document.querySelector("#tableView .ct-wrap");
     rowObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (!e.isIntersecting || state.view !== "table") return;
@@ -221,7 +248,7 @@
           a.classList.toggle("active", a.getAttribute("href") === href);
         });
       });
-    }, { rootMargin: "-140px 0px -60% 0px" });
+    }, { root: wrap || null, rootMargin: "-12% 0px -72% 0px" });
     document.querySelectorAll("#codeTable tr[id]").forEach(function (r) { rowObserver.observe(r); });
   }
 
@@ -237,6 +264,7 @@
       b.classList.toggle("on", on);
       b.setAttribute("aria-pressed", on);
     });
+    updateCtTop();
   }
 
   function render() {
@@ -335,6 +363,8 @@
     renderView();
     var countEl = document.getElementById("taskCount");
     if (countEl) countEl.textContent = TASKS.length;
+    window.addEventListener("resize", updateCtTop);
+    window.addEventListener("load", updateCtTop);
   }
 
   fetch("assets/snippets.html")
