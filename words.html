@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Words in Every Language — INK, Python, PHP, C#, Node.js</title>
+  <meta name="description" content="A word-by-word dictionary: what INK, Python, PHP, C# (.NET) and Node.js each call every keyword and built-in, side by side.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ugeorgefernandez.github.io/ink/words.html">
+  <meta property="og:title" content="Words in Every Language — INK, Python, PHP, C#, Node.js">
+  <meta property="og:description" content="A word-by-word dictionary: what INK, Python, PHP, C# (.NET) and Node.js each call every keyword and built-in, side by side.">
+  <meta property="og:image" content="https://ugeorgefernandez.github.io/ink/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Words in Every Language — INK, Python, PHP, C#, Node.js">
+  <meta name="twitter:description" content="A word-by-word dictionary: what INK, Python, PHP, C# (.NET) and Node.js each call every keyword and built-in, side by side.">
+  <meta name="twitter:image" content="https://ugeorgefernandez.github.io/ink/assets/og-image.jpg">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233355e0'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='16' text-anchor='middle' fill='%23ffffff'%3EIN%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">IN</span>INK</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html#why">Why INK</a>
+      <a href="learn.html">Learn</a>
+      <a href="compare.html">Compare</a>
+      <a href="code.html">Code</a>
+      <a class="active" href="words.html">Words</a>
+      <a href="index.html#start">Get Started</a>
+      <a class="btn btn-primary btn-sm" href="https://github.com/uGeorgeFernandez/ink">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="eyebrow"><span class="dot"></span>Keyword dictionary · 5 languages</span>
+    <h1>The same word in <span class="accent">every language</span></h1>
+    <p>What do you call "print", "variable" or "function" in each language? This table lines up INK, Python, PHP, C# (.NET) and Node.js word for word, so you can read any of them once you know one.</p>
+  </div>
+</div>
+
+<section style="padding-top:48px">
+  <div class="container">
+    <p style="color:var(--text-muted);margin-bottom:20px">
+      The <b style="color:#c2620c">INK</b> column is highlighted. A greyed word means that language kept the same familiar term.
+      On a phone, scroll the table sideways — the idea stays fixed on the left.
+    </p>
+    <div class="cmp-table-wrap words-wrap">
+      <table class="cmp-table words-table">
+        <thead>
+          <tr>
+            <th>What it does</th>
+            <th class="ink-col c-ink"><span class="lang-dot"></span>INK</th>
+            <th class="c-py"><span class="lang-dot"></span>Python</th>
+            <th class="c-php"><span class="lang-dot"></span>PHP</th>
+            <th class="c-cs"><span class="lang-dot"></span>C# / .NET</th>
+            <th class="c-node"><span class="lang-dot"></span>Node.js (JS)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="wcat"><th colspan="6">Showing output</th></tr>
+          <tr><th>Print to the screen</th><td class="ink-col"><code>show</code></td><td><code>print()</code></td><td><code>echo</code></td><td><code>Console.WriteLine()</code></td><td><code>console.log()</code></td></tr>
+
+          <tr class="wcat"><th colspan="6">Variables &amp; constants</th></tr>
+          <tr><th>Make a variable</th><td class="ink-col"><code>let x = 5</code></td><td><code>x = 5</code></td><td><code>$x = 5;</code></td><td><code>var x = 5;</code></td><td><code>let x = 5;</code></td></tr>
+          <tr><th>A value that never changes</th><td class="ink-col"><code>const</code></td><td class="same"><code>X = 5</code> <span class="hint">(UPPER_CASE)</span></td><td><code>const</code> / <code>define()</code></td><td class="same"><code>const</code></td><td class="same"><code>const</code></td></tr>
+
+          <tr class="wcat"><th colspan="6">Types of value</th></tr>
+          <tr><th>A whole number</th><td class="ink-col"><code>num</code></td><td class="same"><code>int</code></td><td class="same"><code>int</code></td><td class="same"><code>int</code></td><td><code>number</code></td></tr>
+          <tr><th>Words / letters (text)</th><td class="ink-col"><code>text</code></td><td><code>str</code></td><td><code>string</code></td><td><code>string</code></td><td><code>string</code></td></tr>
+          <tr><th>Yes / no (true &amp; false)</th><td class="ink-col same"><code>true</code> / <code>false</code></td><td><code>True</code> / <code>False</code></td><td class="same"><code>true</code> / <code>false</code></td><td class="same"><code>true</code> / <code>false</code></td><td class="same"><code>true</code> / <code>false</code></td></tr>
+
+          <tr class="wcat"><th colspan="6">Functions</th></tr>
+          <tr><th>Define a function</th><td class="ink-col"><code>fn</code></td><td><code>def</code></td><td><code>function</code></td><td><code>int Name()</code></td><td><code>function</code></td></tr>
+          <tr><th>Send an answer back</th><td class="ink-col same"><code>return</code></td><td class="same"><code>return</code></td><td class="same"><code>return</code></td><td class="same"><code>return</code></td><td class="same"><code>return</code></td></tr>
+          <tr><th>"Gives back" (return type)</th><td class="ink-col"><code>-&gt;</code></td><td><code>-&gt;</code> <span class="hint">(hint)</span></td><td><code>: type</code></td><td><code>type</code> <span class="hint">(before name)</span></td><td class="hint">— (TypeScript <code>:</code>)</td></tr>
+
+          <tr class="wcat"><th colspan="6">Making decisions</th></tr>
+          <tr><th>Do it only when true</th><td class="ink-col same"><code>if</code></td><td class="same"><code>if</code></td><td class="same"><code>if</code></td><td class="same"><code>if</code></td><td class="same"><code>if</code></td></tr>
+          <tr><th>Otherwise</th><td class="ink-col same"><code>else</code></td><td class="same"><code>else</code></td><td class="same"><code>else</code></td><td class="same"><code>else</code></td><td class="same"><code>else</code></td></tr>
+          <tr><th>Another condition</th><td class="ink-col"><code>else if</code></td><td><code>elif</code></td><td><code>elseif</code></td><td><code>else if</code></td><td><code>else if</code></td></tr>
+          <tr><th>Is equal / not equal</th><td class="ink-col same"><code>==</code> / <code>!=</code></td><td class="same"><code>==</code> / <code>!=</code></td><td class="same"><code>==</code> / <code>!=</code></td><td class="same"><code>==</code> / <code>!=</code></td><td><code>===</code> / <code>!==</code></td></tr>
+
+          <tr class="wcat"><th colspan="6">Loops (repeating)</th></tr>
+          <tr><th>Count through a range</th><td class="ink-col"><code>for i in 0..5</code></td><td><code>for i in range(5)</code></td><td><code>for ($i=0; …)</code></td><td><code>for (int i=0; …)</code></td><td><code>for (let i=0; …)</code></td></tr>
+          <tr><th>Go through every item</th><td class="ink-col hint">(walk by index)</td><td><code>for x in xs</code></td><td><code>foreach</code></td><td><code>foreach</code></td><td><code>for…of</code></td></tr>
+          <tr><th>Repeat while true</th><td class="ink-col same"><code>while</code></td><td class="same"><code>while</code></td><td class="same"><code>while</code></td><td class="same"><code>while</code></td><td class="same"><code>while</code></td></tr>
+          <tr><th>Repeat forever</th><td class="ink-col"><code>loop</code></td><td><code>while True</code></td><td><code>while (true)</code></td><td><code>while (true)</code></td><td><code>while (true)</code></td></tr>
+          <tr><th>Stop the loop / skip a turn</th><td class="ink-col same"><code>break</code> / <code>continue</code></td><td class="same"><code>break</code> / <code>continue</code></td><td class="same"><code>break</code> / <code>continue</code></td><td class="same"><code>break</code> / <code>continue</code></td><td class="same"><code>break</code> / <code>continue</code></td></tr>
+
+          <tr class="wcat"><th colspan="6">Collections</th></tr>
+          <tr><th>A list of things, in order</th><td class="ink-col"><code>list</code> <code>[ ]</code></td><td><code>list</code> <code>[ ]</code></td><td><code>array</code> <code>[ ]</code></td><td><code>int[]</code> / <code>List&lt;T&gt;</code></td><td><code>Array</code> <code>[ ]</code></td></tr>
+          <tr><th>Look up a value by name (map)</th><td class="ink-col"><code>{ }</code></td><td><code>dict</code> <code>{ }</code></td><td><code>[ "k" =&gt; v ]</code></td><td><code>Dictionary&lt;K,V&gt;</code></td><td><code>{ }</code> / <code>Map</code></td></tr>
+          <tr><th>How many items</th><td class="ink-col"><code>len()</code></td><td><code>len()</code></td><td><code>count()</code></td><td><code>.Length</code> / <code>.Count</code></td><td><code>.length</code></td></tr>
+
+          <tr class="wcat"><th colspan="6">Built-in helpers</th></tr>
+          <tr><th>Add up a list</th><td class="ink-col"><code>sum()</code></td><td><code>sum()</code></td><td><code>array_sum()</code></td><td><code>.Sum()</code></td><td><code>.reduce()</code></td></tr>
+          <tr><th>Largest / smallest</th><td class="ink-col"><code>max()</code> / <code>min()</code></td><td><code>max()</code> / <code>min()</code></td><td><code>max()</code> / <code>min()</code></td><td><code>Math.Max()</code> / <code>Math.Min()</code></td><td><code>Math.max()</code> / <code>Math.min()</code></td></tr>
+          <tr><th>Read a number typed by the user</th><td class="ink-col"><code>input()</code></td><td><code>int(input())</code></td><td><code>(int) readline()</code></td><td><code>int.Parse(Console.ReadLine())</code></td><td><code>Number( … )</code></td></tr>
+          <tr><th>Read a line of text</th><td class="ink-col"><code>input_text()</code></td><td><code>input()</code></td><td><code>readline()</code></td><td><code>Console.ReadLine()</code></td><td><code>readline</code> module</td></tr>
+          <tr><th>Read a file</th><td class="ink-col"><code>read_file()</code></td><td><code>open().read()</code></td><td><code>file_get_contents()</code></td><td><code>File.ReadAllText()</code></td><td><code>fs.readFileSync()</code></td></tr>
+          <tr><th>Save a file</th><td class="ink-col"><code>write_file()</code></td><td><code>open().write()</code></td><td><code>file_put_contents()</code></td><td><code>File.WriteAllText()</code></td><td><code>fs.writeFileSync()</code></td></tr>
+
+          <tr class="wcat"><th colspan="6">Symbols &amp; structure</th></tr>
+          <tr><th>Add, subtract, multiply, divide</th><td class="ink-col same"><code>+ - * /</code></td><td class="same"><code>+ - * /</code></td><td class="same"><code>+ - * /</code></td><td class="same"><code>+ - * /</code></td><td class="same"><code>+ - * /</code></td></tr>
+          <tr><th>Join text together</th><td class="ink-col"><code>+</code></td><td><code>+</code></td><td><code>.</code> <span class="hint">(dot)</span></td><td><code>+</code></td><td><code>+</code></td></tr>
+          <tr><th>A block of code</th><td class="ink-col"><code>{ }</code></td><td><code>:</code> + indent</td><td><code>{ }</code></td><td><code>{ }</code></td><td><code>{ }</code></td></tr>
+          <tr><th>End of a statement</th><td class="ink-col hint">(none)</td><td class="hint">(none)</td><td><code>;</code></td><td><code>;</code></td><td><code>;</code> <span class="hint">(optional)</span></td></tr>
+          <tr><th>A note to yourself (comment)</th><td class="ink-col hint">(not yet)</td><td><code>#</code></td><td><code>//</code></td><td><code>//</code></td><td><code>//</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="color:var(--text-muted);font-size:.9rem;margin-top:18px">
+      <b>Reading the table:</b> most of INK's words are the same ones the older languages use (<code>if</code>, <code>for</code>, <code>while</code>, <code>return</code>) — that is on purpose. The highlighted differences (<code>show</code>, <code>let</code>, <code>num</code>, <code>text</code>, <code>fn</code>, <code>loop</code>) are where INK chose the plainer word.
+    </p>
+
+    <div class="cta-band" style="margin-top:56px">
+      <h2>See these words in real programs</h2>
+      <p>The code page shows the same 22 programs written in all five languages, side by side.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="code.html">Compare the code</a>
+        <a class="btn btn-ghost" href="learn.html">Learn INK</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark">IN</span>INK</a>
+        <p>A small, safe, compiled programming language by IndianBrand Technology, Hyderabad, India.</p>
+      </div>
+      <div>
+        <h4>Language</h4>
+        <a href="learn.html">Language guide</a>
+        <a href="words.html">Words in every language</a>
+        <a href="compare.html">Compare languages</a>
+        <a href="code.html">Code comparison</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/uGeorgeFernandez/ink">GitHub</a>
+        <a href="https://github.com/uGeorgeFernandez/ink/issues">Report a bug</a>
+        <a href="https://github.com/uGeorgeFernandez/ink/blob/main/LICENSE">MIT License</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span><span class="tricolor"><i></i><i></i><i></i></span>© <span id="year">2026</span> IndianBrand Technology</span>
+      <span>Write the Future · Jai Hind!</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

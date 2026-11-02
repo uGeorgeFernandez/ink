@@ -91,7 +91,7 @@ for ($i = 0; $i < 5; $i++) {
 }</script>
 
 <!-- functions -->
-<script type="text/plain" class="snip" data-task="fn" data-lang="ink">fn add(a: int, b: int) -> int {
+<script type="text/plain" class="snip" data-task="fn" data-lang="ink">fn add(a: num, b: num) -> num {
     return a + b
 }
 show add(5, 3)</script>
@@ -355,7 +355,7 @@ Console.WriteLine(Greet("George"));</script>
 console.log(greet("George"));</script>
 
 <!-- recursion -->
-<script type="text/plain" class="snip" data-task="fact" data-lang="ink">fn fact(n: int) -> int {
+<script type="text/plain" class="snip" data-task="fact" data-lang="ink">fn fact(n: num) -> num {
     if n < 2 {
         return 1
     }
@@ -434,7 +434,7 @@ for (const city of cities) {
 }</script>
 
 <!-- biggest -->
-<script type="text/plain" class="snip" data-task="biggest" data-lang="ink">fn biggest(xs: list) -> int {
+<script type="text/plain" class="snip" data-task="biggest" data-lang="ink">fn biggest(xs: list) -> num {
     let best = xs[0]
     let i = 1
     while i < len(xs) {
@@ -506,7 +506,7 @@ rl.question("Enter a number: ", (answer) => {
 });</script>
 
 <!-- type mistake -->
-<script type="text/plain" class="snip" data-task="types" data-lang="ink" data-res="Error: wrong argument type&#10;(caught before the program runs)">fn add(a: int, b: int) -> int {
+<script type="text/plain" class="snip" data-task="types" data-lang="ink" data-res="Error: wrong argument type&#10;(caught before the program runs)">fn add(a: num, b: num) -> num {
     return a + b
 }
 show add("hello", 5)</script>

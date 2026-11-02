@@ -5,8 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Learn INK — Language Guide</title>
   <meta name="description" content="The complete INK language guide: variables, decisions, loops, functions, lists, maps, input, files and safety.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ugeorgefernandez.github.io/ink/learn.html">
+  <meta property="og:title" content="Learn INK — Language Guide">
+  <meta property="og:description" content="The complete INK language guide: variables, decisions, loops, functions, lists, maps, input, files and safety.">
+  <meta property="og:image" content="https://ugeorgefernandez.github.io/ink/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Learn INK — Language Guide">
+  <meta name="twitter:description" content="The complete INK language guide: variables, decisions, loops, functions, lists, maps, input, files and safety.">
+  <meta name="twitter:image" content="https://ugeorgefernandez.github.io/ink/assets/og-image.jpg">
   <meta name="theme-color" content="#ffffff">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f08a24'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='16' text-anchor='middle' fill='%23ffffff'%3EIN%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233355e0'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='16' text-anchor='middle' fill='%23ffffff'%3EIN%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -26,6 +37,7 @@
       <a class="active" href="learn.html">Learn</a>
       <a href="compare.html">Compare</a>
       <a href="code.html">Code</a>
+      <a href="words.html">Words</a>
       <a href="index.html#start">Get Started</a>
       <a href="index.html#roadmap">Roadmap</a>
       <a class="btn btn-primary btn-sm" href="https://github.com/uGeorgeFernandez/ink">
@@ -99,7 +111,7 @@ show age</code></pre>
 30</pre>
     <p>INK has two basic kinds of value:</p>
     <ul>
-      <li><code>int</code>: a whole number, like <code>30</code>, <code>0</code> or <code>-5</code>.</li>
+      <li><code>num</code>: a whole number, like <code>30</code>, <code>0</code> or <code>-5</code>.</li>
       <li><code>text</code>: words in double quotes, like <code>"Hyderabad"</code>.</li>
     </ul>
     <h3>Constants</h3>
@@ -185,13 +197,13 @@ while i &lt; 3 {
 
     <h2 id="functions"><span class="sn">06</span>Functions</h2>
     <p>A function is a reusable piece of code. Define it with <code>fn</code>:</p>
-    <pre class="code"><code class="ink">fn add(a: int, b: int) -&gt; int {
+    <pre class="code"><code class="ink">fn add(a: num, b: num) -&gt; num {
     return a + b
 }
 let result = add(5, 3)
 show result</code></pre>
     <pre class="code out">8</pre>
-    <div class="callout"><b>How to read it:</b> the function is named <code>add</code>. It takes two <code>int</code> values, <code>a</code> and <code>b</code>, and gives back (<code>-&gt;</code>) an <code>int</code>. Inside, <code>return</code> sends the answer back.</div>
+    <div class="callout"><b>How to read it:</b> the function is named <code>add</code>. It takes two <code>num</code> values, <code>a</code> and <code>b</code>, and gives back (<code>-&gt;</code>) an <code>num</code>. Inside, <code>return</code> sends the answer back.</div>
     <h3>Functions that return text</h3>
     <pre class="code"><code class="ink">fn greet(name: text) -&gt; text {
     return "Namaste " + name
@@ -199,7 +211,7 @@ show result</code></pre>
 show greet("George")</code></pre>
     <pre class="code out">Namaste George</pre>
     <h3>Recursion: a function calling itself</h3>
-    <pre class="code"><code class="ink">fn fact(n: int) -&gt; int {
+    <pre class="code"><code class="ink">fn fact(n: num) -&gt; num {
     if n &lt; 2 {
         return 1
     }
@@ -328,7 +340,7 @@ show a[99]</code></pre>
           <tr><td>show</td><td>print</td><td>Show something on screen</td></tr>
           <tr><td>let</td><td>var / int x =</td><td>Create a variable</td></tr>
           <tr><td>const</td><td>const / final</td><td>A value that never changes</td></tr>
-          <tr><td>int</td><td>int</td><td>A whole number</td></tr>
+          <tr><td>num</td><td>int</td><td>A whole number</td></tr>
           <tr><td>text</td><td>str / char*</td><td>Words and letters</td></tr>
           <tr><td>list</td><td>array / []</td><td>A collection of things, in order</td></tr>
           <tr><td>fn</td><td>def / func</td><td>Define a function</td></tr>
@@ -344,7 +356,7 @@ show a[99]</code></pre>
           <tr><td>[ ]</td><td>[ ]</td><td>Make a list, or pick a position in one</td></tr>
           <tr><td>{ }</td><td>dict</td><td>Make a map: look up a value by name</td></tr>
           <tr><td>..</td><td>range()</td><td>A range of numbers, as in <code>0..5</code></td></tr>
-          <tr><td>:</td><td>:</td><td>"Is of type", as in <code>age: int</code></td></tr>
+          <tr><td>:</td><td>:</td><td>"Is of type", as in <code>age: num</code></td></tr>
         </tbody>
       </table>
     </div>
@@ -355,7 +367,7 @@ show x
 if x &gt; 0 { }
 for i in 0..10 { }
 while x &lt; 10 { }
-fn add(a: int) -&gt; int { }
+fn add(a: num) -&gt; num { }
 let a = [1, 2, 3]
 let m = {"k": 1}
 input()   input_text()
@@ -384,6 +396,7 @@ read_file   write_file</code></pre>
         <a href="learn.html">Language guide</a>
         <a href="learn.html#reference">Words reference</a>
         <a href="compare.html">Compare languages</a>
+        <a href="words.html">Words in every language</a>
         <a href="code.html">Code comparison</a>
         <a href="index.html#examples">Examples</a>
       </div>
