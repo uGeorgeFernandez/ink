@@ -338,7 +338,7 @@ section.soft { background: var(--bg-soft); border-top: 1px solid var(--border); 
 
 /* footer */
 footer { background: #fff; border-top: 1px solid var(--border); color: var(--text-muted); padding: 56px 0 32px; font-size: .93rem; }
-.foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 32px; margin-bottom: 36px; }
+.foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 36px; }
 footer h4 { font-size: .95rem; margin-bottom: 12px; font-family: var(--font); letter-spacing: 0; }
 footer a { color: var(--text-muted); display: block; padding: 3px 0; }
 footer a:hover { color: var(--primary); }
@@ -688,3 +688,10 @@ html:has(.code-toolbar) { scroll-padding-top: 150px; }
 .use-card h3 { margin-bottom: 8px; }
 .use-card p { color: var(--text-muted); font-size: .95rem; margin: 0; }
 .use-note { text-align: center; color: var(--text-muted); margin-top: 28px; font-size: .95rem; }
+
+/* ---------- What's new ---------- */
+.news-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.news-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+.news-tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--primary); background: var(--primary-soft); padding: 3px 10px; border-radius: 999px; margin-bottom: 12px; }
+.news-item h3 { font-size: 1.12rem; margin-bottom: 8px; }
+.news-item p { color: var(--text-muted); font-size: .93rem; margin: 0; }
