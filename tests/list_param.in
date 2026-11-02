@@ -1,4 +1,4 @@
-fn biggest(xs: list) -> int {
+fn biggest(xs: list) -> num {
     let best = xs[0]
     let i = 1
     while i < len(xs) {
@@ -8,7 +8,7 @@ fn biggest(xs: list) -> int {
     return best
 }
 
-fn total(xs: list) -> int {
+fn total(xs: list) -> num {
     return sum(xs)
 }
 

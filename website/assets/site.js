@@ -1,7 +1,7 @@
 // INK website helpers: syntax highlighting, nav, example tabs, docs scrollspy.
 (function () {
   var KEYWORDS = ["let", "const", "fn", "return", "if", "else", "for", "in", "while", "loop", "break", "continue", "show", "true", "false"];
-  var TYPES = ["int", "text", "list"];
+  var TYPES = ["num", "int", "text", "list"];
   var BUILTINS = ["len", "sum", "min", "max", "abs", "input", "input_text", "write_file", "read_file"];
 
   function esc(s) {

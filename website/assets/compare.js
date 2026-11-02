@@ -56,7 +56,7 @@
     node: "const let var function return if else for while of in new true false null undefined class async await require break"
   };
   var TY = {
-    ink: "int text list",
+    ink: "num int text list",
     py: "int str float list dict",
     php: "int string float array",
     cs: "int string bool double Dictionary Console File Math",

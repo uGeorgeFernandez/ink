@@ -143,6 +143,7 @@ Best: 95</pre>
       <div class="word"><span class="old">print</span><span class="arrow">→</span><span class="new">show</span><span class="why">nothing is printed on paper today</span></div>
       <div class="word"><span class="old">var</span><span class="arrow">→</span><span class="new">let</span><span class="why">reads like a sentence</span></div>
       <div class="word"><span class="old">str</span><span class="arrow">→</span><span class="new">text</span><span class="why">the honest word for words</span></div>
+      <div class="word"><span class="old">int</span><span class="arrow">→</span><span class="new">num</span><span class="why">a number, said simply</span></div>
       <div class="word"><span class="old">def</span><span class="arrow">→</span><span class="new">fn</span><span class="why">short for function</span></div>
       <div class="word"><span class="old">while(true)</span><span class="arrow">→</span><span class="new">loop</span><span class="why">one word for "repeat forever"</span></div>
       <div class="word"><span class="old">array</span><span class="arrow">→</span><span class="new">list</span><span class="why">what people actually say</span></div>
@@ -244,7 +245,7 @@ if marks &gt; 90 {
         <div class="ex-panel" id="ex5">
           <div class="window">
             <div class="window-bar"><i></i><i></i><i></i><span class="window-title">05_functions.in</span></div>
-            <pre><code class="ink">fn add(a: int, b: int) -&gt; int {
+            <pre><code class="ink">fn add(a: num, b: num) -&gt; num {
     return a + b
 }
 show add(5, 3)</code></pre>
@@ -279,7 +280,7 @@ Priya lives in Delhi</pre></div>
         <div class="ex-panel" id="ex8">
           <div class="window">
             <div class="window-bar"><i></i><i></i><i></i><span class="window-title">08_biggest.in</span></div>
-            <pre><code class="ink">fn biggest(xs: list) -&gt; int {
+            <pre><code class="ink">fn biggest(xs: list) -&gt; num {
     let best = xs[0]
     let i = 1
     while i &lt; len(xs) {

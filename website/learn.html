@@ -111,7 +111,7 @@ show age</code></pre>
 30</pre>
     <p>INK has two basic kinds of value:</p>
     <ul>
-      <li><code>int</code>: a whole number, like <code>30</code>, <code>0</code> or <code>-5</code>.</li>
+      <li><code>num</code>: a whole number, like <code>30</code>, <code>0</code> or <code>-5</code>.</li>
       <li><code>text</code>: words in double quotes, like <code>"Hyderabad"</code>.</li>
     </ul>
     <h3>Constants</h3>
@@ -197,13 +197,13 @@ while i &lt; 3 {
 
     <h2 id="functions"><span class="sn">06</span>Functions</h2>
     <p>A function is a reusable piece of code. Define it with <code>fn</code>:</p>
-    <pre class="code"><code class="ink">fn add(a: int, b: int) -&gt; int {
+    <pre class="code"><code class="ink">fn add(a: num, b: num) -&gt; num {
     return a + b
 }
 let result = add(5, 3)
 show result</code></pre>
     <pre class="code out">8</pre>
-    <div class="callout"><b>How to read it:</b> the function is named <code>add</code>. It takes two <code>int</code> values, <code>a</code> and <code>b</code>, and gives back (<code>-&gt;</code>) an <code>int</code>. Inside, <code>return</code> sends the answer back.</div>
+    <div class="callout"><b>How to read it:</b> the function is named <code>add</code>. It takes two <code>num</code> values, <code>a</code> and <code>b</code>, and gives back (<code>-&gt;</code>) an <code>num</code>. Inside, <code>return</code> sends the answer back.</div>
     <h3>Functions that return text</h3>
     <pre class="code"><code class="ink">fn greet(name: text) -&gt; text {
     return "Namaste " + name
@@ -211,7 +211,7 @@ show result</code></pre>
 show greet("George")</code></pre>
     <pre class="code out">Namaste George</pre>
     <h3>Recursion: a function calling itself</h3>
-    <pre class="code"><code class="ink">fn fact(n: int) -&gt; int {
+    <pre class="code"><code class="ink">fn fact(n: num) -&gt; num {
     if n &lt; 2 {
         return 1
     }
@@ -340,7 +340,7 @@ show a[99]</code></pre>
           <tr><td>show</td><td>print</td><td>Show something on screen</td></tr>
           <tr><td>let</td><td>var / int x =</td><td>Create a variable</td></tr>
           <tr><td>const</td><td>const / final</td><td>A value that never changes</td></tr>
-          <tr><td>int</td><td>int</td><td>A whole number</td></tr>
+          <tr><td>num</td><td>int</td><td>A whole number</td></tr>
           <tr><td>text</td><td>str / char*</td><td>Words and letters</td></tr>
           <tr><td>list</td><td>array / []</td><td>A collection of things, in order</td></tr>
           <tr><td>fn</td><td>def / func</td><td>Define a function</td></tr>
@@ -356,7 +356,7 @@ show a[99]</code></pre>
           <tr><td>[ ]</td><td>[ ]</td><td>Make a list, or pick a position in one</td></tr>
           <tr><td>{ }</td><td>dict</td><td>Make a map: look up a value by name</td></tr>
           <tr><td>..</td><td>range()</td><td>A range of numbers, as in <code>0..5</code></td></tr>
-          <tr><td>:</td><td>:</td><td>"Is of type", as in <code>age: int</code></td></tr>
+          <tr><td>:</td><td>:</td><td>"Is of type", as in <code>age: num</code></td></tr>
         </tbody>
       </table>
     </div>
@@ -367,7 +367,7 @@ show x
 if x &gt; 0 { }
 for i in 0..10 { }
 while x &lt; 10 { }
-fn add(a: int) -&gt; int { }
+fn add(a: num) -&gt; num { }
 let a = [1, 2, 3]
 let m = {"k": 1}
 input()   input_text()

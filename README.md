@@ -46,7 +46,7 @@ Namaste George
 | Maths & text | `show "Age: " + 30` |
 | Decisions | `if age > 18 { ... } else { ... }` |
 | Loops | `for i in 0..5 { }`, `while x < 10 { }` |
-| Functions | `fn add(a: int, b: int) -> int { return a + b }` |
+| Functions | `fn add(a: num, b: num) -> num { return a + b }` |
 | Recursion | a function calling itself |
 | Lists | `let nums = [10, 20, 30]`, `nums[0]`, `len(nums)` |
 | Text lists | `let cities = ["Delhi", "Mumbai"]` |

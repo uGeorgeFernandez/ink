@@ -4,11 +4,11 @@ show "Jai Hind!"
 let name = "IndianBrand"
 show name
 
-fn add(a: int, b: int) -> int {
+fn add(a: num, b: num) -> num {
     return a + b
 }
 
-fn double(x: int) -> int {
+fn double(x: num) -> num {
     return x + x
 }
 
