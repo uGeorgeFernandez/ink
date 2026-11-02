@@ -641,3 +641,31 @@ html:has(.code-toolbar) { scroll-padding-top: 150px; }
 .ff-note { font-size: .9rem; color: var(--text-muted); }
 .ff-note.ok { color: var(--green); font-weight: 600; }
 .ff-note.err { color: #b91c1c; }
+
+/* ---------- Try INK playground (hero) ---------- */
+.hero-demo { min-width: 0; }
+.pg-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.pg-tab { font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer; padding: 5px 13px; border-radius: 999px; border: 1px solid var(--border-strong); background: #fff; color: var(--text-muted); transition: all .15s ease; }
+.pg-tab:hover { border-color: var(--primary); color: var(--primary); }
+.pg-tab.active { background: var(--primary); border-color: var(--primary); color: #fff; box-shadow: 0 4px 12px rgba(51, 85, 224, .25); }
+#playground .window-bar { align-items: center; }
+.pg-run { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; font: inherit; font-size: .82rem; font-weight: 700; cursor: pointer; padding: 5px 14px; border-radius: 8px; border: 0; background: var(--primary); color: #fff; }
+.pg-run:hover { background: var(--primary-deep); }
+.pg-run svg { width: 13px; height: 13px; }
+#playground pre { min-height: 148px; }
+#pgOut.pg-running { color: var(--text-muted); font-style: italic; }
+.pg-caption { color: var(--text-muted); font-size: .9rem; margin: 14px 2px 0; text-align: center; }
+.pg-caption a { font-weight: 600; }
+
+/* ---------- Download section ---------- */
+.dl-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 44px; align-items: center; }
+@media (max-width: 860px) { .dl-grid { grid-template-columns: 1fr; gap: 28px; } }
+.dl-cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 14px; }
+.btn-lg { padding: 15px 28px; font-size: 1.05rem; }
+.dl-sub { color: var(--text-muted); font-size: .92rem; }
+.dl-sub code { font-size: .84rem; }
+.dl-card h4 { font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); margin: 20px 0 8px; font-family: var(--font); }
+.dl-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.dl-list li { position: relative; padding-left: 28px; color: var(--text); font-size: .95rem; }
+.dl-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--green); font-weight: 700; }
+.dl-req { color: var(--text-muted); font-size: .93rem; margin: 0; }
