@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Download INK — free &amp; open source</title>
+  <meta name="description" content="Download INK v0.8 — a small, safe, compiled programming language. Free, MIT-licensed. Build it in minutes on Linux or WSL.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233355e0'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='800' font-size='16' text-anchor='middle' fill='%23ffffff'%3EIN%3C/text%3E%3C/svg%3E">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ugeorgefernandez.github.io/ink/download.html">
+  <meta property="og:title" content="Download INK — free &amp; open source">
+  <meta property="og:description" content="Download INK v0.8 and build it in minutes. Free, MIT-licensed.">
+  <meta property="og:image" content="https://ugeorgefernandez.github.io/ink/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://ugeorgefernandez.github.io/ink/assets/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">IN</span>INK</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav-links">
+      <a href="index.html#why">Why INK</a>
+      <a class="active" href="download.html">Download</a>
+      <a href="learn.html">Learn</a>
+      <a href="compare.html">Compare</a>
+      <a href="code.html">Code</a>
+      <a href="words.html">Words</a>
+      <a class="btn btn-primary btn-sm" href="https://github.com/uGeorgeFernandez/ink">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <span class="eyebrow"><span class="dot"></span>Free &amp; open source · MIT</span>
+    <h1>Download <span class="accent">INK</span></h1>
+    <p>Get the compiler, build it with one command, and write your first program in minutes. INK is free forever — no sign-up, no cost.</p>
+  </div>
+</div>
+
+<section style="padding-top:56px">
+  <div class="container">
+    <!-- Release card -->
+    <div class="release-card">
+      <div class="release-main">
+        <span class="release-tag">Latest release</span>
+        <h2>INK v0.8</h2>
+        <p>The current release of the INK compiler — a working prototype that compiles and runs real programs.</p>
+        <div class="dl-cta">
+          <a class="btn btn-primary btn-lg" href="https://github.com/uGeorgeFernandez/ink/archive/refs/heads/main.zip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v11M8 10l4 4 4-4M5 20h14"/></svg>
+            Download .zip
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/uGeorgeFernandez/ink">View on GitHub</a>
+        </div>
+      </div>
+      <ul class="release-facts">
+        <li><span>License</span><b>MIT (free)</b></li>
+        <li><span>Platform</span><b>Linux x86-64</b></li>
+        <li><span>Built with</span><b>x86-64 Assembly</b></li>
+        <li><span>Size</span><b>Small — a few hundred KB</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Install steps -->
+<section class="soft" id="install">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Install</span>
+      <h2>Up and running in four steps</h2>
+      <p>INK builds from source. On Windows, do all of this inside <a href="https://learn.microsoft.com/windows/wsl/install">WSL</a> (a free Linux terminal for Windows).</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Install the tools</h3>
+        <p>INK needs the NASM assembler and LLVM/Clang. On Ubuntu or Debian:</p>
+        <pre class="code">sudo apt-get install nasm llvm clang</pre>
+      </div>
+      <div class="step">
+        <h3>Get INK</h3>
+        <p>Clone the repository (or download and unzip the .zip above):</p>
+        <pre class="code">git clone https://github.com/uGeorgeFernandez/ink
+cd ink</pre>
+      </div>
+      <div class="step">
+        <h3>Build the compiler</h3>
+        <p>One command assembles and links INK:</p>
+        <pre class="code">./build.sh</pre>
+      </div>
+      <div class="step">
+        <h3>Write &amp; run</h3>
+        <p>Save <code>first.in</code>, then run it:</p>
+        <pre class="code"><code class="ink">show "Hello from INK!"</code></pre>
+        <pre class="code" style="margin-top:10px">./ink.sh first.in</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- What's inside + requirements -->
+<section>
+  <div class="container">
+    <div class="status-grid">
+      <div class="card">
+        <h3>What's inside the download</h3>
+        <ul class="dl-list">
+          <li>The INK compiler — lexer, parser and code generator (x86-64 Assembly)</li>
+          <li><code>build.sh</code> to build it, <code>ink.sh</code> to run your programs</li>
+          <li>8 example programs and a folder of test programs</li>
+          <li>The Language Guide, Words Reference and Phases docs</li>
+          <li>The full source, MIT-licensed — read it, change it, share it</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Requirements</h3>
+        <ul class="limits">
+          <li><b>Linux on x86-64</b> — the only platform INK runs on today.</li>
+          <li><b>Windows:</b> install <a href="https://learn.microsoft.com/windows/wsl/install">WSL</a> and work inside it.</li>
+          <li><b>macOS / Apple Silicon:</b> not supported yet — use a Linux VM or WSL on a PC.</li>
+          <li><b>Tools:</b> <code>nasm</code> and <code>clang</code> (installed in step 1).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Release notes -->
+<section class="soft" id="notes">
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Release notes</span>
+      <h2>What works in v0.8</h2>
+      <p>INK is an honest working prototype. Here is exactly what it can and cannot do today.</p>
+    </div>
+    <div class="status-grid">
+      <div class="card">
+        <div class="badge-row"><span class="pill ok">Working</span></div>
+        <ul class="dl-list">
+          <li>Variables, constants, numbers (<code>num</code>) and text</li>
+          <li>Decisions (<code>if</code> / <code>else if</code> / <code>else</code>) and loops (<code>for</code>, <code>while</code>, <code>loop</code>)</li>
+          <li>Functions, return values and recursion</li>
+          <li>Lists and maps, with built-ins (<code>len</code>, <code>sum</code>, <code>min</code>, <code>max</code>, <code>abs</code>)</li>
+          <li>Keyboard input and reading / writing files</li>
+          <li>Type checking and memory-safe list access</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Known limitations</h3>
+        <ul class="limits">
+          <li>No modules / <code>import</code> yet — one program, one file.</li>
+          <li>Memory isn't freed yet, so very long-running programs grow.</li>
+          <li><code>read_file</code> reads up to 64&nbsp;KB.</li>
+          <li>Error messages don't show line numbers yet.</li>
+        </ul>
+        <p class="dl-req" style="margin-top:14px">See the <a href="index.html#roadmap">roadmap</a> for what's next.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section>
+  <div class="container">
+    <div class="cta-band">
+      <h2>Got it running? Tell us how it went.</h2>
+      <p>Your feedback — especially from students and teachers — decides what we build next.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="index.html#feedback">Give feedback</a>
+        <a class="btn btn-ghost" href="learn.html">Learn the language</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark">IN</span>INK</a>
+        <p>A small, safe, compiled programming language by IndianBrand Technology, Hyderabad, India.</p>
+      </div>
+      <div>
+        <h4>Language</h4>
+        <a href="learn.html">Language guide</a>
+        <a href="words.html">Words in every language</a>
+        <a href="compare.html">Compare languages</a>
+        <a href="code.html">Code comparison</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="download.html">Download</a>
+        <a href="https://github.com/uGeorgeFernandez/ink">GitHub</a>
+        <a href="https://github.com/uGeorgeFernandez/ink/blob/main/LICENSE">MIT License</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span><span class="tricolor"><i></i><i></i><i></i></span>© <span id="year">2026</span> IndianBrand Technology</span>
+      <span>Write the Future · Jai Hind!</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
