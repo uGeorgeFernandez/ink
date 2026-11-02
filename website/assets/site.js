@@ -79,3 +79,27 @@
   var yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();
 })();
+
+// Feedback form — composes an email to the INK team (no backend needed).
+(function () {
+  var ff = document.getElementById("feedbackForm");
+  if (!ff) return;
+  ff.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var d = new FormData(ff);
+    var note = document.getElementById("ffNote");
+    var msg = (d.get("message") || "").toString().trim();
+    if (!msg) { note.textContent = "Please write a little feedback first."; note.className = "ff-note err"; return; }
+    var body = "Feedback on INK\n\n" +
+      "Name: " + (d.get("name") || "-") + "\n" +
+      "Email: " + (d.get("email") || "-") + "\n" +
+      "How easy: " + (d.get("rating") || "-") + "\n\n" +
+      msg + "\n";
+    var link = "mailto:inddn1947@gmail.com?subject=" + encodeURIComponent("INK feedback") +
+               "&body=" + encodeURIComponent(body);
+    window.location.href = link;
+    note.textContent = "Thank you! Your email app should open — just press send.";
+    note.className = "ff-note ok";
+    ff.reset();
+  });
+})();
