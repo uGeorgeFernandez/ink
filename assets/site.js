@@ -78,6 +78,49 @@
 
   var yr = document.getElementById("year");
   if (yr) yr.textContent = new Date().getFullYear();
+
+  // ---- Try INK playground (homepage hero) ----
+  var PG = [
+    { name: "Hello",    file: "hello.in",   code: 'show "Namaste, India!"', out: "Namaste, India!" },
+    { name: "Greeting", file: "greet.in",   code: 'fn greet(name: text) -> text {\n    return "Namaste " + name\n}\nshow greet("Priya")', out: "Namaste Priya" },
+    { name: "Counting", file: "count.in",   code: 'for i in 0..5 {\n    show i\n}', out: "0\n1\n2\n3\n4" },
+    { name: "Grades",   file: "grade.in",   code: 'let marks = 75\nif marks > 90 {\n    show "Grade A"\n} else if marks > 60 {\n    show "Grade B"\n} else {\n    show "Fail"\n}', out: "Grade B" },
+    { name: "Biggest",  file: "biggest.in", code: 'fn biggest(xs: list) -> num {\n    let best = xs[0]\n    let i = 1\n    while i < len(xs) {\n        best = max(best, xs[i])\n        i = i + 1\n    }\n    return best\n}\nshow biggest([3, 9, 2, 15, 7])', out: "15" }
+  ];
+  var pgTabs = document.getElementById("pgTabs");
+  if (pgTabs) {
+    var pgCode = document.getElementById("pgCode");
+    var pgOut = document.getElementById("pgOut");
+    var pgFile = document.getElementById("pgFile");
+    var pgRun = document.getElementById("pgRun");
+    var pgCur = 0, pgTimer = null;
+    var pgShow = function (i) {
+      var ex = PG[i];
+      pgCode.innerHTML = highlight(ex.code);
+      pgFile.textContent = ex.file;
+      pgTabs.querySelectorAll(".pg-tab").forEach(function (t, j) {
+        t.classList.toggle("active", j === i);
+        t.setAttribute("aria-selected", j === i);
+      });
+    };
+    var pgRunEx = function (i) {
+      clearTimeout(pgTimer);
+      pgOut.className = "pg-running";
+      pgOut.textContent = "running…";
+      pgTimer = setTimeout(function () { pgOut.className = ""; pgOut.textContent = PG[i].out; }, 420);
+    };
+    PG.forEach(function (ex, i) {
+      var b = document.createElement("button");
+      b.className = "pg-tab" + (i === 0 ? " active" : "");
+      b.type = "button";
+      b.textContent = ex.name;
+      b.setAttribute("role", "tab");
+      b.addEventListener("click", function () { pgCur = i; pgShow(i); pgRunEx(i); });
+      pgTabs.appendChild(b);
+    });
+    if (pgRun) pgRun.addEventListener("click", function () { pgRunEx(pgCur); });
+    pgShow(0);
+  }
 })();
 
 // Feedback form — composes an email to the INK team (no backend needed).
